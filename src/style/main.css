@@ -109,3 +109,22 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Client */
+.clientLogo {
+  border-radius: 20px;
+  filter: grayscale(1);
+  transition: 200ms;
+  width: 30%;
+}
+
+.clientLogo:hover {
+  filter: grayscale(0);
+  transition: 200ms;
+}
+
+@media all and (max-width: 1300px) {
+  .clientLogo {
+    width: 90%;
+  }
+}
