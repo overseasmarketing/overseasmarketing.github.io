@@ -115,7 +115,7 @@ section {
   border-radius: 20px;
   filter: grayscale(1);
   transition: 200ms;
-  width: 30%;
+  width: 20%;
 }
 
 .clientLogo:hover {
