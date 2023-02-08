@@ -19,6 +19,8 @@
   <style>
     body {
       background-color: #ffff01;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
     }
 
     a {
@@ -28,8 +30,14 @@
 
     .button {
       width: 30%;
-      background-color: transparent;
+      color: #ffff01;
+      font-size: large;
+      background-color: black;
       border-color: black;
+    }
+
+    .w-full {
+      width: 30%;
     }
 
     .button:hover {
@@ -48,6 +56,10 @@
       .button {
         width: 90%;
       }
+
+      .w-full {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -64,21 +76,27 @@
         Soya Chaap | Paneer Tikka | Veg Kabab | Mushroom Tikka | Franky Rolls
       </p>
       <br>
+      <a href="upi://pay?pa=harshitrahejapersonal@okhdfcbank&pn=Harshit%20Raheja">
+        <button type="button" class="btn btn-success w-full">
+          MAKE PAYMENT
+        </button>
+      </a>
+      <br><br>
       <a href="tel:9689386963">
         <button type="button" class="btn btn-light button">
-          Phone
+          PHONE
         </button>
       </a>
       <br><br>
       <a target="_blank" href="https://goo.gl/maps/EGa96eCxv2sQ3z6U6">
         <button type="button" class="btn btn-light button">
-          Location
+          LOCATION
         </button>
       </a>
       <br><br>
       <a target="_blank" href="https://www.instagram.com/cherrys_barbeque_soyachaap/">
         <button type="button" class="btn btn-light button">
-          Instagram
+          INSTAGRAM
         </button>
       </a>
       <br><br>
