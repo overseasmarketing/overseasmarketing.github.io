@@ -33,4 +33,4 @@ if ($name == "Name: Crytomag" || $name == "Name: mag") {
   curl_close($ch);
 }
 
-echo "<script>window.location.href = 'https://overseasmarketing.studio/';</script>";
+echo "<script>window.location.href = 'https://overseasmarketing.studio/contact';</script>";
