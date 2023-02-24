@@ -79,3 +79,14 @@
   font-weight: 300;
   line-height: 1.5em;
 }
+
+/* Additional Effect */
+.serviceBox {
+  filter: grayscale(1);
+  transition: 200ms;
+}
+
+.serviceBox:hover {
+  filter: grayscale(0);
+  transition: 200ms;
+}
