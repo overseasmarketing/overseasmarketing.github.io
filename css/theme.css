@@ -13643,3 +13643,87 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.navLogo {
+  transition: 200ms;
+}
+
+.navLogo:hover {
+  transform: rotate(30deg);
+  transition: 200ms;
+}
+
+/* Contact Form */
+.card {
+  background-color: transparent;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 1%;
+  font-size: 18px;
+  resize: none;
+}
+
+input:focus {
+  outline-color: transparent !important;
+}
+
+.contactForm {
+  text-align: left;
+}
+
+.form-group {
+  margin: 8px;
+  padding: 8px;
+}
+
+.form-control {
+  background-color: transparent !important;
+  color: white !important;
+  outline-color: transparent !important;
+  border: 1px solid transparent;
+  border: 1px solid #8a8a8e;
+  border-radius: 0%;
+  padding: 8px;
+}
+
+.form-control:focus {
+  outline-color: transparent !important;
+}
+
+.btn-custom {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 0%;
+  padding: 2%;
+  font-size: 18px;
+  border: 1px solid transparent !important;
+}
+
+.btn-custom:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white !important;
+}
+
+/* Placeholder Text */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(255, 255, 255, 0.5);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(255, 255, 255, 0.5);
+}
