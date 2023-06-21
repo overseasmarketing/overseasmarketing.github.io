@@ -1,6 +1,7 @@
 let footer = `
   <footer class="bg-black border-top border-dark">
-    <div class="container py-vh-4 text-secondary fw-lighter">
+    
+  <div class="container py-vh-4 text-secondary fw-lighter">
       <div class="row">
         <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
           <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href=".">
@@ -64,17 +65,13 @@ let footer = `
 
 let navbar = `
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-    <div class="container-fluid">
-      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href=".">
+
+      <a class="navbar-brand  text-center" href=".">
         <img width="48" class="img-fluid navLogo" src="img/tube.png" alt="Overseas Logo">
         <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas</span>
       </a>
+
       <div class="navbar-nav list-group list-group-horizontal">
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="." aria-label="Homepage">
-            Home
-          </a>
-        </li>
         <li class="nav-item">
           <a class="nav-link fs-5" href="services" aria-label="A services page">
             Services
@@ -91,6 +88,6 @@ let navbar = `
           </a>
         </li>
       </div>
-    </div>
+
   </nav>
 `;
