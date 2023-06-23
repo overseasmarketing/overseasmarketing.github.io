@@ -64,8 +64,8 @@ let footer = `
         </div>
       </div>
     </div>
-    <div class="container text-center small py-vh-2 border-top border-dark">Made by
-      <!--<a href="https://quantumbyte.studio/" class="link-fancy link-fancy-light" target="_blank">QuantumByteStudios</a>-->
+    <div class="container text-center small py-vh-2 border-top border-dark">
+      <!--Made by <a href="https://quantumbyte.studio/" class="link-fancy link-fancy-light" target="_blank">QuantumByteStudios</a>-->
       © Copyright Overseas Marketing
       All Rights Reserved</a>
     </div>
