@@ -65,7 +65,6 @@ let footer = `
       </div>
     </div>
     <div class="container text-center small py-vh-2 border-top border-dark">
-      <!--Made by <a href="https://quantumbyte.studio/" class="link-fancy link-fancy-light" target="_blank">QuantumByteStudios</a>-->
       © Copyright Overseas Marketing
       All Rights Reserved</a>
     </div>
@@ -76,23 +75,23 @@ let navbar = `
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
 
       <a class="navbar-brand  text-center" href=".">
-        <img width="48" class="img-fluid navLogo" src="img/tube.png" alt="Overseas Logo">
+        <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.studio/img/tube.png" alt="Overseas Logo">
         <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
       </a>
 
       <div class="navbar-nav list-group list-group-horizontal">
         <li class="nav-item">
-          <a class="nav-link fs-5" href="services" aria-label="A services page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/services" aria-label="A services page">
             services
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="about" aria-label="An about page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/about" aria-label="An about page">
             about
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="contact" aria-label="A contact page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/contact" aria-label="A contact page">
             contact
           </a>
         </li>
