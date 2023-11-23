@@ -5,7 +5,7 @@ let footer = `
       <div class="row">
         <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
           <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href=".">
-            <img width="48" class="img-fluid" src="img/tube.png" alt="Overseas Logo">
+            <img width="48" class="img-fluid" src="https://overseasmarketing.studio/img/tube.png" alt="Overseas Logo">
             <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
           </a>
 
