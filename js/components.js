@@ -74,7 +74,7 @@ let footer = `
 let navbar = `
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
 
-      <a class="navbar-brand  text-center" href=".">
+      <a class="navbar-brand text-center" href=".">
         <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.studio/img/tube.png" alt="Overseas Logo">
         <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
       </a>
