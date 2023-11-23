@@ -6,7 +6,7 @@ let footer = `
         <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
           <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href=".">
             <img width="48" class="img-fluid" src="img/tube.png" alt="Overseas Logo">
-            <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas</span>
+            <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
           </a>
 
         </div>
@@ -55,10 +55,10 @@ let footer = `
           <span class="h6">Support</span>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a href="about" class="link-fancy link-fancy-light">About us</a>
+              <a href="about" class="link-fancy link-fancy-light">about us</a>
             </li>
             <li class="nav-item">
-              <a href="contact" class="link-fancy link-fancy-light">Contact</a>
+              <a href="contact" class="link-fancy link-fancy-light">contact</a>
             </li>
           </ul>
         </div>
@@ -77,23 +77,23 @@ let navbar = `
 
       <a class="navbar-brand  text-center" href=".">
         <img width="48" class="img-fluid navLogo" src="img/tube.png" alt="Overseas Logo">
-        <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas</span>
+        <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
       </a>
 
       <div class="navbar-nav list-group list-group-horizontal">
         <li class="nav-item">
           <a class="nav-link fs-5" href="services" aria-label="A services page">
-            Services
+            services
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link fs-5" href="about" aria-label="An about page">
-            About
+            about
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link fs-5" href="contact" aria-label="A contact page">
-            Contact
+            contact
           </a>
         </li>
       </div>
