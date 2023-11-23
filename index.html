@@ -115,7 +115,7 @@
               we do marketing stuff for <span class="text-danger" id="word">entrepreneurs</span>
             </h1>
             <script>
-              let audience = ['business owners', 'influencers', 'startups', 'small businesses', 'creators', 'artists', 'freelancers', 'designers', 'entrepreneurs', 'everyone']
+              let audience = ['business owners', 'influencers', 'startups', 'small businesses', 'creators', 'artists', 'freelancers', 'designers', 'entrepreneurs', 'EVERYONE']
               let i = 0;
               let word = document.getElementById('word');
               setInterval(() => {
@@ -348,10 +348,10 @@
                         let j = 0;
                         let name = document.getElementById('name');
                         setInterval(() => {
-                          name.innerHTML = audience[i];
-                          i++;
-                          if (i == audience.length) {
-                            i = 0;
+                          name.innerHTML = audience[j];
+                          j++;
+                          if (j == audience.length) {
+                            j = 0;
                           }
                         }, 1500);
                       </script>
