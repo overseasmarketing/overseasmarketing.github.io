@@ -95,6 +95,11 @@ let navbar = `
             contact
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/work" aria-label="A work page">
+            our work
+          </a>
+        </li>
       </div>
 
   </nav>
