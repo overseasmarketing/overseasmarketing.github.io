@@ -81,25 +81,30 @@ let navbar = `
 
       <div class="navbar-nav list-group list-group-horizontal">
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/services" aria-label="A services page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/services" aria-label="Our Services">
             services
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/about" aria-label="An about page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/about" aria-label="About Us">
             about
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/contact" aria-label="A contact page">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/contact" aria-label="Contact Us">
             contact
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/work" aria-label="A work page">
-            our work
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/work" aria-label="Our Work">
+            work
           </a>
         </li>
+<!--         <li class="nav-item">
+          <a class="nav-link fs-5" href="https://overseasmarketing.studio/partners" aria-label="Our Partners">
+            partners
+          </a>
+        </li> -->
       </div>
 
   </nav>
