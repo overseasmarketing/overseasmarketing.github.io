@@ -100,12 +100,12 @@ let navbar = `
             work
           </a>
         </li>
-<!--         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link fs-5" href="https://overseasmarketing.studio/partners" aria-label="Our Partners">
             partners
           </a>
-        </li> -->
+        </li>
       </div>
-
+      
   </nav>
 `;

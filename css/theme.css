@@ -13732,3 +13732,13 @@ input:focus {
 .h-100vh {
   height: 100vh;
 }
+
+.partners-logo {
+  border-radius: 15px;
+  filter: contrast(0.5);
+  cursor: pointer;
+}
+
+.partners-logo:hover {
+  filter: contrast(1);
+}
