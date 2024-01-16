@@ -1,4 +1,4 @@
-let footer = `
+const footer = `
   <footer class="bg-black border-top border-dark">
     
   <div class="container py-vh-4 text-secondary fw-lighter">
@@ -71,7 +71,7 @@ let footer = `
   </footer>
 `;
 
-let navbar = `
+const navbar = `
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
 
       <a class="navbar-brand text-center" href=".">
