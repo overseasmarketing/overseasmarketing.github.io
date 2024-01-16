@@ -5,7 +5,7 @@ let footer = `
       <div class="row">
         <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
           <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href=".">
-            <img width="48" class="img-fluid" src="https://overseasmarketing.studio/img/tube.png" alt="Overseas Logo">
+            <img width="48" class="img-fluid" src="https://overseasmarketing.co.in/img/tube.png" alt="Overseas Logo">
             <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
           </a>
 
@@ -75,33 +75,33 @@ let navbar = `
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
 
       <a class="navbar-brand text-center" href=".">
-        <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.studio/img/tube.png" alt="Overseas Logo">
+        <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.co.in/img/tube.png" alt="Overseas Logo">
         <span class="ms-md-1 mt-1 fw-bolder me-md-5">Overseas Marketing</span>
       </a>
 
       <div class="navbar-nav list-group list-group-horizontal">
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/services" aria-label="Our Services">
+          <a class="nav-link fs-5" href="https://overseasmarketing.co.in/services" aria-label="Our Services">
             services
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/about" aria-label="About Us">
+          <a class="nav-link fs-5" href="https://overseasmarketing.co.in/about" aria-label="About Us">
             about
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/contact" aria-label="Contact Us">
+          <a class="nav-link fs-5" href="https://overseasmarketing.co.in/contact" aria-label="Contact Us">
             contact
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/work" aria-label="Our Work">
+          <a class="nav-link fs-5" href="https://overseasmarketing.co.in/work" aria-label="Our Work">
             work
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-5" href="https://overseasmarketing.studio/partners" aria-label="Our Partners">
+          <a class="nav-link fs-5" href="https://overseasmarketing.co.in/partners" aria-label="Our Partners">
             partners
           </a>
         </li>

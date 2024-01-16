@@ -2,9 +2,9 @@
 
 // Get Message Details
 $alert = "NEW MESSAGE - Overseas Marketing";
-$name =  "Name: " . $_POST['uoxbp'];
-$email =  "Email: " . $_POST['xmtmc'];
-$message =  "Message: " . $_POST['tthwy'];
+$name = "Name: " . $_POST['uoxbp'];
+$email = "Email: " . $_POST['xmtmc'];
+$message = "Message: " . $_POST['tthwy'];
 
 // Test Message Details
 // $alert = "NEW MESSAGE";
@@ -33,4 +33,4 @@ if ($name == "Name: Crytomag" || $name == "Name: mag") {
   curl_close($ch);
 }
 
-echo "<script>window.location.href = 'https://overseasmarketing.studio/contact';</script>";
+echo "<script>window.location.href = 'https://overseasmarketing.co.in/contact';</script>";

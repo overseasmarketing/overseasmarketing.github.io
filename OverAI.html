@@ -90,6 +90,21 @@
         url('fonts/inter-v12-latin-700.woff') format('woff');
       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
+
+    /*
+      Over AI Custom CSS
+    */
+    .btn-light {
+      background-color: transparent;
+      color: #ffffff;
+    }
+
+    .btn-light:hover {
+      background-color: #2fff82 !important;
+      color: #000000 !important;
+      /* Add Box Shadow */
+      box-shadow: 0 0 20px 0 #2fff8275;
+    }
   </style>
 
 
@@ -106,98 +121,102 @@
   <main>
 
     <div class="w-100 h-100vh overflow-hidden position-relative bg-black text-white" data-aos="fade">
-      <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
       <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
-        <div class="row d-flex align-items-center justify-content-center py-vh-5">
+        <div class="row d-flex align-items-center justify-content-center py-vh-5 mt-5">
           <div class="col-12 col-xl-10">
             <!-- <span class="h5 text-secondary fw-lighter">Overseas Marketing</span> -->
             <h1 class="display-huge mt-3 mb-3 lh-1">
-              we do marketing stuff for <span class="text-danger" id="word">entrepreneurs</span>
+              Over<span class="text-danger" id="word">AI</span>
             </h1>
-            <script>
-              let audience = ['business owners', 'influencers', 'startups', 'small businesses', 'creators', 'artists', 'freelancers', 'designers', 'entrepreneurs', 'EVERYONE']
-              let i = 0;
-              let word = document.getElementById('word');
-              setInterval(() => {
-                word.innerHTML = audience[i];
-                i++;
-                if (i == audience.length) {
-                  i = 0;
-                }
-              }, 1500);
-            </script>
           </div>
           <div class="col-12 col-xl-8">
             <p class="text-secondary">
-              Overseas Marketing is a dynamic and innovative marketing firm that specializes in helping businesses
-              expand their reach and tap into new markets overseas.
+              At the heart of OverAI lies the power of Google Gemini, a state-of-the-art AI system that fuels the
+              platform's
+              remarkable capabilities.
             </p>
           </div>
           <div class="col-12 text-center">
             <a href="https://overseasmarketing.co.in/quote/" class="btn btn-xl btn-light">
-              Get a Quote
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
+              Try Now
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="w-100 position-relative bg-black text-white bg-cover d-flex align-items-center">
-      <div class="container-fluid px-vw-5">
-        <div class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"></div>
-        <div class="row d-flex align-items-center position-relative justify-content-center px-0 g-5">
-          <div class="col-12 col-lg-6">
-            <img src="img/one.png" width="2280" height="1732" alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="img/two.png" width="1116" height="1578" alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="2000">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="img/three.png" width="1116" height="848" alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="3000">
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="bg-dark">
       <div class="container px-vw-5 py-vh-5">
         <div class="row d-flex align-items-center">
           <div class="col-12 col-lg-7 text-lg-end">
-            <span class="h5 text-secondary fw-lighter">What we do</span>
-            <h2 class="display-4">
-              we offer a wide range of <span class="text-danger">marketing services</span>, including market research,
-              advertising, public relations, and
-              digital marketing.
-            </h2>
+            <span class="h5 text-secondary fw-lighter">Over AI</span>
+            <div class="card p-3">
+              <div class="card-title">
+                Try OverAI's Chat Interface
+              </div>
+              <div class="card-body">
+
+                <!-- AI CHAT FORM -->
+                <script type="module">
+                  async function generateContent() {
+                    const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
+
+                    const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + apiKey;
+
+                    const data = {
+                      contents: [
+                        {
+                          parts: [
+                            {
+                              text: "Hello"
+                            }
+                          ]
+                        }
+                      ]
+                    };
+
+                    const options = {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(data)
+                    };
+
+                    try {
+                      const response = await fetch(url, options);
+                      const result = await response.json();
+                      console.log(result);
+                      // Handle the result as needed
+                    } catch (error) {
+                      console.error('Error:', error);
+                      // Handle errors
+                    }
+                  }
+                </script>
+
+                <div class="alert">
+                  <input id="prompt" name="prompt" type="text" placeholder="Enter your prompt">
+                  <button onclick="generateContent();" class="btn btn-dark">Send</button>
+                </div>
+
+
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-5">
-            <h3 class="pt-5">Graphic Designing & Content Creation</h3>
+            <h4 class="pt-5">
+              Unleashing the Future of Intelligent Interaction with
+              <span>
+                Over<span class="text-danger" id="word">AI</span>
+              </span>
+            </h4>
             <p class="text-secondary">
-              Graphic design is the process of visual communication and problem-solving through the use of typography,
-              photography, and illustration.
-              <br>
-              <a href="services" class="link-fancy link-fancy-light me-2">Tell me more</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-              </svg>
-            </p>
-            <h3 class="border-top border-secondary pt-5 mt-5">Web Development & SEO</h3>
-            <p class="text-secondary">
-              Web development is the process of creating and maintaining websites and web applications.
-              <br>
-              <a href="services" class="link-fancy link-fancy-light me-2">Tell me more</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-              </svg>
+              Step into the extraordinary realm of OverAI, a cutting-edge platform that redefines the boundaries of
+              artificial
+              intelligence through its seamless integration with Google Gemini. OverAI represents the pinnacle of
+              intelligent
+              technology, offering a myriad of features designed to enhance and elevate your digital experiences.
             </p>
           </div>
         </div>
@@ -343,18 +362,6 @@
                       <br>
                       Warm Regards,<br>
                       <span class="text-white">Overseas Marketing</span>
-                      <script>
-                        let customerLetter = ['business owners', 'influencers', 'startups', 'small businesses', 'creators', 'artists', 'freelancers', 'designers', 'entrepreneurs', 'everyone']
-                        let j = 0;
-                        let name = document.getElementById('name');
-                        setInterval(() => {
-                          name.innerHTML = audience[j];
-                          j++;
-                          if (j == audience.length) {
-                            j = 0;
-                          }
-                        }, 1500);
-                      </script>
                   </p>
                 </div>
               </div>
