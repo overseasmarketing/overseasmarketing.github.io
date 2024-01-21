@@ -1,41 +1,3 @@
-<!-- <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-
-    <a class="navbar-brand text-center" href=".">
-        <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.co.in/img/tube.png"
-            alt="Overseas Logo">
-        <span class="fw-bolder mx-2">Overseas Marketing</span>
-    </a>
-
-    <div class="navbar-nav list-group list-group-horizontal">
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="https://overseasmarketing.co.in/services" aria-label="Our Services">
-                services
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="https://overseasmarketing.co.in/about" aria-label="About Us">
-                about
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="https://overseasmarketing.co.in/contact" aria-label="Contact Us">
-                contact
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="https://overseasmarketing.co.in/work" aria-label="Our Work">
-                work
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="https://overseasmarketing.co.in/partners" aria-label="Our Partners">
-                partners
-            </a>
-        </li>
-    </div>
-
-</nav> -->
-
 <nav class="navbar navbar-dark bg-transparent text-white">
     <div class="container-fluid">
         <div class="row w-100 d-flex align-items-center justify-content-center p-3">
@@ -62,7 +24,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in')">Home</a>
+                                onclick="openLink('https://overseasmarketing.co.in');">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
@@ -94,3 +56,20 @@
         </div>
     </div>
 </nav>
+
+<script>
+    // Navbar
+    function showClose() {
+        document.getElementById("close").style.display = "block";
+        document.getElementById("bars").style.display = "none";
+    }
+
+    function showBars() {
+        document.getElementById("bars").style.display = "block";
+        document.getElementById("close").style.display = "none";
+    }
+
+    function openLink(link) {
+        window.open(link);
+    }
+</script>
