@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row w-100 d-flex align-items-center justify-content-center p-3">
             <div class="col-10">
-                <a class="navbar-brand text-center" href=".">
+                <a class="navbar-brand text-center" href="https://overseasmarketing.co.in/">
                     <img width="48" class="img-fluid navLogo" src="https://overseasmarketing.co.in/img/tube.png"
                         alt="Overseas Logo">
                     <span class="fw-bolder mx-2">Overseas Marketing</span>
@@ -32,15 +32,15 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/about')">About Us</a>
+                                onclick="openLink('https://overseasmarketing.co.in/about')">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/contact')">Contact Us</a>
+                                onclick="openLink('https://overseasmarketing.co.in/contact')">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/work')">Our Work</a>
+                                onclick="openLink('https://overseasmarketing.co.in/work')">Work</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
@@ -48,7 +48,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/OverAI')">OverAI</a>
+                                onclick="openLink('https://overseasmarketing.co.in/OverAI')">
+                                OverAI <span class="badge bg-primary">NEW</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

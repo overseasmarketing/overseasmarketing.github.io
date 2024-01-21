@@ -1,224 +1,160 @@
 <!doctype html>
 <html class="h-100" lang="en">
 
-<head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta
-    content='Overseas Marketing is a dynamic and innovative marketing firm that specializes in helping businesses expand their reach and tap into new markets overseas. Whether you are looking to expand into new regions or simply want to increase your global brand awareness, we have the expertise and resources to help you achieve your goals.'>
-  <meta content='Overseas Marketing Company, Overseas Marketing Agency' name='keywords'>
-  <meta name="author" content="Overseas Marketing">
-  <!-- Title -->
-  <title>Overseas Marketing</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/theme.min.css">
-  <link rel="stylesheet" href="css/theme.css">
-  <!-- Javascript -->
-  <script src="js/components.js"></script>
-  <!-- favicon -->
-  <link rel='icon' href='img/tube.png'>
-  <link rel="apple-touch-icon" sizes="180x180" href="img/tube.png">
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
-    type="text/css">
+<!-- Head -->
+<?php include 'head.php'; ?>
+<!-- Head -->
 
-  <style>
-    /* inter-300 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-300.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-300.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+<body class="bg-black text-white" data-bs-spy="scroll" data-bs-target="#navScroll">
 
-    /* inter-400 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-regular.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+    <!-- Navbar -->
+    <?php include 'navbar.php'; ?>
+    <!-- Navbar -->
 
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-500.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+    <main>
 
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-700.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-  </style>
+        <div class="container">
+            <div class="row d-flex justify-content-center py-vh-5 pb-0 mt-5">
+                <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="row ">
+                        <div class="col-12">
+                            <br>
+                            <h1 class="display-1 fw-bold">Our
+                                <!-- <span class="fs-5 text-secondary">Overseas Marketing</span><br> -->
+                                Services
+                            </h1>
+                            <p class="lead border-top pt-5 mt-5" data-aos="fade-up">
+                                we offer a wide range of marketing services, including market research, advertising,
+                                public relations,
+                                and digital marketing. We also provide consulting services to help you develop a
+                                marketing strategy that
+                                will help you achieve your business goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">01. Graphic Designing</h2>
+                            <p class="text-secondary">
+                                Graphic designing is the art of visual communication through the use of typography,
+                                images, and layout
+                                to convey a message or idea.
+                            </p>
+                        </div>
+                    </div>
 
-</head>
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">02. Video Editing</h2>
+                            <p class="text-secondary">
+                                Video editing is the process of manipulating and arranging video footage to create a
+                                cohesive and
+                                engaging final product.
+                            </p>
+                        </div>
+                    </div>
 
-<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">03. Brand Design</h2>
+                            <p class="text-secondary">
+                                Brand design is the process of creating a visual and conceptual identity that
+                                distinguishes a company or
+                                product from others.
+                            </p>
+                        </div>
+                    </div>
 
-  <!-- Navbar -->
-  <script>
-    document.write(navbar);
-  </script>
-  <!-- Navbar -->
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">04. Content Creation</h2>
+                            <p class="text-secondary">
+                                Content creation is the process of generating and producing engaging and valuable media
+                                for various
+                                platforms and audiences.
+                            </p>
+                        </div>
+                    </div>
 
-  <main>
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">05. Web Development</h2>
+                            <p class="text-secondary">
+                                Web development is the process of creating and maintaining websites and web applications
+                                using
+                                programming languages and technologies.
+                            </p>
+                        </div>
+                    </div>
 
-    <div class="container">
-      <div class="row d-flex justify-content-center py-vh-5 pb-0 mt-5">
-        <div class="col-12 col-lg-10 col-xl-8">
-          <div class="row ">
-            <div class="col-12">
-              <br>
-              <h1 class="display-1 fw-bold">Our
-                <!-- <span class="fs-5 text-secondary">Overseas Marketing</span><br> -->
-                Services
-              </h1>
-              <p class="lead border-top pt-5 mt-5" data-aos="fade-up">
-                we offer a wide range of marketing services, including market research, advertising, public relations,
-                and digital marketing. We also provide consulting services to help you develop a marketing strategy that
-                will help you achieve your business goals.
-              </p>
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">06. UX/UI</h2>
+                            <p class="text-secondary">
+                                UX/UI stands for User Experience/User Interface. It involves designing intuitive
+                                interfaces (UI) for
+                                optimal user interaction and satisfaction (UX).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">07. SEO</h2>
+                            <p class="text-secondary">
+                                SEO stands for Search Engine Optimization. It is the practice of improving a website's
+                                visibility and
+                                ranking on search engines like Google.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">08. Social Media Management</h2>
+                            <p class="text-secondary">
+                                Social media management is the process of overseeing and optimizing online platforms to
+                                engage, grow,
+                                and maintain a brand's online presence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-start" data-aos="fade-right">
+                        <div class="col-12">
+                            <h2 class="h3 mt-5 border-top pt-5">09. Advertising</h2>
+                            <p class="text-secondary">
+                                Advertising is a persuasive communication tool used to promote products or services
+                                through various
+                                media channels to attract and influence potential customers.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
+
         </div>
 
-        <div class="col-12 col-lg-10 col-xl-8">
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">01. Graphic Designing</h2>
-              <p class="text-secondary">
-                Graphic designing is the art of visual communication through the use of typography, images, and layout
-                to convey a message or idea.
-              </p>
-            </div>
-          </div>
+    </main>
 
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">02. Video Editing</h2>
-              <p class="text-secondary">
-                Video editing is the process of manipulating and arranging video footage to create a cohesive and
-                engaging final product.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">03. Brand Design</h2>
-              <p class="text-secondary">
-                Brand design is the process of creating a visual and conceptual identity that distinguishes a company or
-                product from others.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">04. Content Creation</h2>
-              <p class="text-secondary">
-                Content creation is the process of generating and producing engaging and valuable media for various
-                platforms and audiences.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">05. Web Development</h2>
-              <p class="text-secondary">
-                Web development is the process of creating and maintaining websites and web applications using
-                programming languages and technologies.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">06. UX/UI</h2>
-              <p class="text-secondary">
-                UX/UI stands for User Experience/User Interface. It involves designing intuitive interfaces (UI) for
-                optimal user interaction and satisfaction (UX).
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">07. SEO</h2>
-              <p class="text-secondary">
-                SEO stands for Search Engine Optimization. It is the practice of improving a website's visibility and
-                ranking on search engines like Google.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">08. Social Media Management</h2>
-              <p class="text-secondary">
-                Social media management is the process of overseeing and optimizing online platforms to engage, grow,
-                and maintain a brand's online presence.
-              </p>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-start" data-aos="fade-right">
-            <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">09. Advertising</h2>
-              <p class="text-secondary">
-                Advertising is a persuasive communication tool used to promote products or services through various
-                media channels to attract and influence potential customers.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <script>
+    <!-- Footer -->
+    <script>
     document.write(footer);
-  </script>
+    </script>
 
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
     AOS.init({
-      duration: 800, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
     });
-  </script>
-  <script>
+    </script>
+    <script>
     let scrollpos = window.scrollY;
     const header = document.querySelector(".navbar");
     const header_height = header.offsetHeight;
@@ -226,15 +162,18 @@
     const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
     const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
 
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
+    window.addEventListener('scroll', function() {
+        scrollpos = window.scrollY;
 
-      if (scrollpos >= header_height) { add_class_on_scroll(); }
-      else { remove_class_on_scroll(); }
+        if (scrollpos >= header_height) {
+            add_class_on_scroll();
+        } else {
+            remove_class_on_scroll();
+        }
 
-      console.log(scrollpos);
+        console.log(scrollpos);
     })
-  </script>
+    </script>
 
 </body>
 

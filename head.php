@@ -16,6 +16,8 @@
         href="https://overseasmarketing.co.in/easmarketing.studio/img/tube.png">
 
     <!-- CSS -->
+    <!-- Local -->
+    <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
