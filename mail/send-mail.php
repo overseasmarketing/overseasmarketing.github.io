@@ -14,7 +14,7 @@ if ($email_type == "approach-mail") {
             <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
         </head>
         <body>
-            <div>
+            <div class='container'>
                 <h1>Dear " . $user . ",</h1>
                 We hope this message finds you in great spirits. Overseas Marketing, a dynamic and innovative marketing
                 firm, is excited to connect with your organization to explore how our tailored solutions can drive the
@@ -74,11 +74,8 @@ if ($email_type == "approach-mail") {
                 Best Regards,
                 <br>
                 Overseas Marketing
-                <br><br>
-                <br><br>
-                <img src='https://overseasmarketing.co.in/img/tube.png' style='width:50px;'>
-                <hr>
-                <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>www.overseasmarketing.co.in</a>
+                <br>
+                <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>overseasmarketing.co.in</a>
             </div>
         </body>
     </html>
