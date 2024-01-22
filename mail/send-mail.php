@@ -10,57 +10,53 @@ if ($email_type == "approach-mail") {
     // Message Content
     $message = "
     <html>
-        <head>
-            <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
-        </head>
-        <body class='container bg-black text-white p-5'>
-            <h1 class='m-0 p-0 fs-1'>Dear " . $user . ",</h1>
-            <div class='m-0 p-0'>
-                <br>
+        <body>
+            <div style='background:black;color:white;padding:100px;'>
+                <h1 style='margin:0px;'>Dear " . $user . ",</h1>
                 We hope this message finds you in great spirits. Overseas Marketing, a dynamic and innovative marketing
                 firm, is excited to connect with your organization to explore how our tailored solutions can drive the
                 growth of your business.
                 <br><br>
                 At Overseas Marketing, we specialize in a diverse range of services designed to boost your brand's
                 visibility and impact:
-                <br><br>
+                <br>
                 <div>
-                    <ol>
+                    <ul>
                         <li>
-                            Graphic Designing:
+                            <b>Graphic Designing</b>:
                             Captivate your audience with compelling visual communication through our expert graphic design services.
                         </li>
                         <li>
-                            Web Development:
+                            <b>Web Development</b>:
                             Elevate your online presence with seamlessly designed websites and web applications that align with your brand identity.
                         </li>
                         <li>
-                            SEO (Search Engine Optimization):
+                            <b>SEO (Search Engine Optimization)</b>:
                             Boost your website's visibility on search engines and attract more organic traffic with our proven SEO strategies.
                         </li>
                         <li>
-                            Social Media Management:
+                            <b>Social Media Management</b>:
                             Harness the power of social platforms to engage, grow, and maintain a strong online presence for your brand.
                         </li>
-                    </ol>
+                    </ul>
                 </div>
                 Here's how Overseas Marketing can make a significant impact on your business:
                 <div>
                     <ul>
                         <li>
-                            Strategic Planning:
+                            <b>Strategic Planning</b>:
                             Develop customized marketing strategies aligned with your business objectives.
                         </li>
                         <li>
-                            Visual Excellence:
+                            <b>Visual Excellence</b>:
                             Elevate your brand with captivating graphic design, video editing, and brand design.
                         </li>
                         <li>
-                            Digital Presence:
+                            <b>Digital Presence</b>:
                             Optimize your online presence through effective SEO, web development, and social media management.
                         </li>
                         <li>
-                            Global Expansion:
+                            <b>Global Expansion</b>:
                             Tap into new markets and audiences with our overseas marketing expertise.
                         </li>
                     </ul>
@@ -75,6 +71,11 @@ if ($email_type == "approach-mail") {
                 Best Regards,
                 <br>
                 Overseas Marketing
+                <br><br>
+                <br><br>
+                <img src='https://overseasmarketing.co.in/img/tube.png' style='width:50px;'>
+                <hr>
+                <a href='https://overseasmarketing.co.in' style='color:white;text-decoration:none;'>www.overseasmarketing.co.in</a>
             </div>
         </body>
     </html>
