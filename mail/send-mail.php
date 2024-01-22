@@ -10,9 +10,12 @@ if ($email_type == "approach-mail") {
     // Message Content
     $message = "
     <html>
+        <head>
+            <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
+        </head>
         <body>
-            <div style='background:black;color:white;padding:100px;'>
-                <h1 style='margin:0px;'>Dear " . $user . ",</h1>
+            <div>
+                <h1>Dear " . $user . ",</h1>
                 We hope this message finds you in great spirits. Overseas Marketing, a dynamic and innovative marketing
                 firm, is excited to connect with your organization to explore how our tailored solutions can drive the
                 growth of your business.
@@ -75,7 +78,7 @@ if ($email_type == "approach-mail") {
                 <br><br>
                 <img src='https://overseasmarketing.co.in/img/tube.png' style='width:50px;'>
                 <hr>
-                <a href='https://overseasmarketing.co.in' style='color:white;text-decoration:none;'>www.overseasmarketing.co.in</a>
+                <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>www.overseasmarketing.co.in</a>
             </div>
         </body>
     </html>
