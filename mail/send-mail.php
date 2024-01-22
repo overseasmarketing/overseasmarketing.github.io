@@ -28,83 +28,40 @@ if ($email_type == "approach-mail") {
                     <ol>
                         <li>
                             Graphic Designing:
-                            <ul>
-                                <li>
-                                    Captivate your audience with compelling visual communication through our expert
-                                    graphic
-                                    design services.
-                                </li>
-                            </ul>
+                            Captivate your audience with compelling visual communication through our expert graphic design services.
                         </li>
                         <li>
                             Web Development:
-                            <ul>
-                                <li>
-                                    Elevate your online presence with seamlessly designed websites and web applications
-                                    that
-                                    align with your brand identity.
-                                </li>
-                            </ul>
+                            Elevate your online presence with seamlessly designed websites and web applications that align with your brand identity.
                         </li>
                         <li>
                             SEO (Search Engine Optimization):
-                            <ul>
-                                <li>
-                                    Boost your website's visibility on search engines and attract more organic traffic
-                                    with
-                                    our proven
-                                    SEO strategies.
-                                </li>
-                            </ul>
+                            Boost your website's visibility on search engines and attract more organic traffic with our proven SEO strategies.
                         </li>
                         <li>
                             Social Media Management:
-                            <ul>
-                                <li>
-                                    Harness the power of social platforms to engage, grow, and maintain a strong online
-                                    presence for
-                                    your
-                                    brand.
-                                </li>
-                            </ul>
+                            Harness the power of social platforms to engage, grow, and maintain a strong online presence for your brand.
                         </li>
                     </ol>
                 </div>
                 Here's how Overseas Marketing can make a significant impact on your business:
                 <div>
                     <ul>
-                        <li>Strategic Planning:
-                            <ul>
-                                <li>
-                                    Develop customized marketing strategies aligned with your business objectives.
-                                </li>
-                            </ul>
+                        <li>
+                            Strategic Planning:
+                            Develop customized marketing strategies aligned with your business objectives.
                         </li>
                         <li>
                             Visual Excellence:
-                            <ul>
-                                <li>
-                                    Elevate your brand with captivating graphic design, video editing, and brand design.
-                                </li>
-                            </ul>
+                            Elevate your brand with captivating graphic design, video editing, and brand design.
                         </li>
                         <li>
                             Digital Presence:
-                            <ul>
-                                <li>
-                                    Optimize your online presence through effective SEO, web development, and social
-                                    media
-                                    management.
-                                </li>
-                            </ul>
+                            Optimize your online presence through effective SEO, web development, and social media management.
                         </li>
                         <li>
                             Global Expansion:
-                            <ul>
-                                <li>
-                                    Tap into new markets and audiences with our overseas marketing expertise.
-                                </li>
-                            </ul>
+                            Tap into new markets and audiences with our overseas marketing expertise.
                         </li>
                     </ul>
                 </div>
