@@ -71,7 +71,7 @@ if ($email_type == "approach-mail") {
                     </ol>
                 </div>
                 Here's how Overseas Marketing can make a significant impact on your business:
-                <div class='mx-3'>
+                <div>
                     <ul>
                         <li>Strategic Planning:
                             <ul>
