@@ -242,8 +242,7 @@
 
         <div class="container-fluid px-vw-5 position-relative" data-aos="fade">
             <div class="position-absolute w-100 h-50 bg-black top-0 start-0"></div>
-            <div class="position-relative py-vh-5 bg-cover bg-center rounded-5"
-                style="background-image: url(img/webp/abstract12.webp)">
+            <div class="position-relative py-vh-5 bg-cover bg-center rounded-5" style="background-image: url('')">
                 <div class="container bg-black px-vw-5 py-vh-3 ro unded-5 shadow">
                     <div class="row d-flex align-items-center">
                         <div class="col-12 d-flex align-items-center bg-dark shadow rounded-5 p-0"

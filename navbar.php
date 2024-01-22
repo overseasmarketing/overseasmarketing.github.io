@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark bg-transparent text-white">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row w-100 d-flex align-items-center justify-content-center p-3">
             <div class="col-10">
                 <a class="navbar-brand text-center" href="https://overseasmarketing.co.in/">
