@@ -24,7 +24,7 @@ if ($email_type == "approach-mail") {
                 At Overseas Marketing, we specialize in a diverse range of services designed to boost your brand's
                 visibility and impact:
                 <br><br>
-                <div class='mx-3'>
+                <div>
                     <ol>
                         <li>
                             Graphic Designing:
@@ -122,20 +122,23 @@ if ($email_type == "approach-mail") {
         </body>
     </html>
     ";
+    // Display name for the sender
+    $fromName = "Overseas Marketing";
+    // Sender email address
+    $fromEmail = "contact@overseasmarketing.co.in";
     // Headers
-    $from = "contact@overseasmarketing.co.in";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: $from" . "\r\n";
+    $headers .= "From: $fromName <$fromEmail>" . "\r\n";
     // Send the email
     $mailSent = mail($to, $subject, $message, $headers);
     // Check if the email was sent successfully
     if ($mailSent) {
-        echo "Email sent successfully.";
+        echo "<div class='alert alert-success'>Email sent successfully!</div>";
         echo $message;
     } else {
-        echo "Failed to send email. Please contact developer.";
-        // echo $message;
+        echo "<div class='alert alert-danger'>Email not sent!</div>";
+        echo $message;
     }
 } else {
     echo "Invalid Email Type";
