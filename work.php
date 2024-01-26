@@ -24,13 +24,16 @@
                 Work
               </h1>
               <p class="lead border-top pt-5 mt-5" data-aos="fade-up">
-                Explore our portfolio of impactful projects that showcase our dedication to excellence.
+                Explore our portfolio of impactful projects that showcase our
+                dedication to excellence.
                 From innovative
                 solutions to
-                creative designs, our work reflects a commitment to delivering outstanding results.
+                creative designs, our work reflects a commitment to delivering
+                outstanding results.
                 Discover how we turn
                 ideas into
-                reality and collaborate with clients to achieve success. Browse through our diverse
+                reality and collaborate with clients to achieve success.
+                Browse through our diverse
                 range of projects to
                 witness the
                 expertise, passion, and craftsmanship that define our work.
@@ -186,9 +189,11 @@
               <p class="text-secondary">
               <ol>
                 <li>
-                  Search <a class="text-white" href="https://www.google.com/search?q=Ishwar+Chawla">Ishwar Chawla</a> on
+                  Search <a class="text-white" href="https://www.google.com/search?q=Ishwar+Chawla">Ishwar
+                    Chawla</a> on
                   google you might
-                  see his website <a class="text-white" href="https://ishwarchawla.me/">ishwarchawla.me</a> on the first
+                  see his website <a class="text-white" href="https://ishwarchawla.me/">ishwarchawla.me</a> on
+                  the first
                   page ranking 1<sup>st</sup>
                 </li>
               </ol>
@@ -198,7 +203,8 @@
 
           <div class="row d-flex align-items-start" data-aos="fade-right">
             <div class="col-12">
-              <h2 class="h3 mt-5 border-top pt-5">08. Social Media Management</h2>
+              <h2 class="h3 mt-5 border-top pt-5">08. Social Media
+                Management</h2>
               <br>
               <button class="btn btn-xl btn-light">
                 <a class="text-decoration-none text-dark" target="_blank"
@@ -230,10 +236,8 @@
   </main>
 
   <!-- Footer -->
-  <script>
-    document.write(footer);
-  </script>
-
+  <?php include 'footer.php'; ?>
+  <!-- End Footer -->
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/aos.js"></script>
@@ -241,26 +245,6 @@
     AOS.init({
       duration: 800, // values from 0 to 3000, with step 50ms
     });
-  </script>
-  <script>
-    let scrollpos = window.scrollY;
-    const header = document.querySelector(".navbar");
-    const header_height = header.offsetHeight;
-
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
-
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
-
-      if (scrollpos >= header_height) {
-        add_class_on_scroll();
-      } else {
-        remove_class_on_scroll();
-      }
-
-      console.log(scrollpos);
-    })
   </script>
 
 </body>

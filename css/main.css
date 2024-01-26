@@ -26,3 +26,46 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #404040;
 }
+
+.our-work-card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.our-work-card:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.05);
+}
+
+/* AI */
+.reply {
+  text-align: left;
+  background: black;
+  color: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+}
+
+#prompt {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.user_input {
+  text-align: right;
+  background: rgb(215, 215, 215);
+  color: black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0px;
+}
+
+input {
+  box-shadow: none !important;
+}

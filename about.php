@@ -21,10 +21,10 @@
                         <div class="col-12">
                             <br>
                             <h1 class="display-1 fw-bold">About
-                                <!-- <span class="fs-5 text-secondary">Overseas Marketing</span><br> -->
+                                <!-- <span class="fs-5 text-white">Overseas Marketing</span><br> -->
                                 Us
                             </h1>
-                            <p class="lead text-secondary border-top pt-5 mt-5" data-aos="fade-up">
+                            <p class="lead text-white border-top pt-5 mt-5" data-aos="fade-up">
                                 we offer a wide range of marketing services, including market research, advertising,
                                 public relations,
                                 and digital marketing. We also provide consulting services to help you develop a
@@ -40,7 +40,7 @@
                     <div class="row d-flex align-items-start" data-aos="fade-right">
                         <div class="col-12 col-lg-7">
                             <h2 class="h3 mt-5 border-top pt-5">Ishwar Chawla</h2>
-                            <p class="text-secondary">
+                            <p class="text-white">
                                 Graphic Designer<br>
                                 <span class="fs-6">
                                     Ishwar, works on the visual part of the company. He is responsible for creating
@@ -55,19 +55,19 @@
                         </div>
                         <div class="col-12 col-lg-4 offset-lg-1 bg-gray-900 p-5 mt-5">
                             <h3 class="h6">Social Media</h3>
-                            <p class="text-secondary">
+                            <p class="text-white">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a href="https://www.instagram.com/deadwithasmile_/"
-                                        class="link-fancy link-fancy-light">Instagram</a>
+                                        class="text-decoration-none">Instagram</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="https://twitter.com/Ishwar_chawla_"
-                                        class="link-fancy link-fancy-light">Twitter</a>
+                                        class="text-decoration-none">Twitter</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="https://www.linkedin.com/in/ishwar-chawla/"
-                                        class="link-fancy link-fancy-light">LinkedIn</a>
+                                        class="text-decoration-none">LinkedIn</a>
                                 </li>
                             </ul>
                             </p>
@@ -76,7 +76,7 @@
                     <div class="row d-flex align-items-start" data-aos="fade-right">
                         <div class="col-12 col-lg-7">
                             <h2 class="h3 mt-5 border-top pt-5">Harshit Raheja</h2>
-                            <p class="text-secondary">
+                            <p class="text-white">
                                 Web Developer<br>
                                 <span class="fs-6">
                                     Harshit, works on the front-end and back-end of the website. He is responsible for
@@ -89,19 +89,19 @@
                         </div>
                         <div class="col-12 col-lg-4 offset-lg-1 bg-gray-900 p-5 mt-5">
                             <h3 class="h6">Social Media</h3>
-                            <p class="text-secondary">
+                            <p class="text-white">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a href="https://www.instagram.com/_harshit_raheja_/"
-                                        class="link-fancy link-fancy-light">Instagram</a>
+                                        class="text-decoration-none">Instagram</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="https://twitter.com/HarshitRaheja7"
-                                        class="link-fancy link-fancy-light">Twitter</a>
+                                        class="text-decoration-none">Twitter</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="https://www.linkedin.com/in/harshitraheja/"
-                                        class="link-fancy link-fancy-light">LinkedIn</a>
+                                        class="text-decoration-none">LinkedIn</a>
                                 </li>
                             </ul>
                             </p>
@@ -110,7 +110,7 @@
                     <div class="row d-flex align-items-start" data-aos="fade-right">
                         <div class="col-12 col-lg-7">
                             <h2 class="h3 mt-5 border-top pt-5">Neev Raheja</h2>
-                            <p class="text-secondary">
+                            <p class="text-white">
                                 Chief Executive Officer (CEO), Junior Graphic Designer<br>
                                 <span class="fs-6">
                                     Neev, our Junior Graphic Designer, focuses on the visual aspects of our company.
@@ -123,15 +123,14 @@
                         </div>
                         <div class="col-12 col-lg-4 offset-lg-1 bg-gray-900 p-5 mt-5">
                             <h3 class="h6">Social Media</h3>
-                            <p class="text-secondary">
+                            <p class="text-white">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a href="https://www.instagram.com/raheja_neev"
-                                        class="link-fancy link-fancy-light">Instagram</a>
+                                        class="text-decoration-none">Instagram</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="https://twitter.com/neevraheja"
-                                        class="link-fancy link-fancy-light">Twitter</a>
+                                    <a href="https://twitter.com/neevraheja" class="text-decoration-none">Twitter</a>
                                 </li>
                             </ul>
                             </p>
@@ -140,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="row d-flex align-items-start justify-content-center py-vh-3 text-muted" data-aos="fade">
+            <div class="row d-flex align-items-start justify-content-center py-vh-3 text-light" data-aos="fade">
                 <div class="col-12 col-lg-10 col-xl-9">
                     <div class="p-5 small bg-gray-900">
                         <center>
@@ -192,37 +191,15 @@
     </main>
 
     <!-- Footer -->
-    <script>
-    document.write(footer);
-    </script>
+    <?php include 'footer.php'; ?>
     <!-- End Footer -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
-    AOS.init({
-        duration: 800, // values from 0 to 3000, with step 50ms
-    });
-    </script>
-    <script>
-    let scrollpos = window.scrollY;
-    const header = document.querySelector(".navbar");
-    const header_height = header.offsetHeight;
-
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
-
-    window.addEventListener('scroll', function() {
-        scrollpos = window.scrollY;
-
-        if (scrollpos >= header_height) {
-            add_class_on_scroll();
-        } else {
-            remove_class_on_scroll();
-        }
-
-        console.log(scrollpos);
-    })
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+        });
     </script>
 
 </body>
