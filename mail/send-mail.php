@@ -106,7 +106,7 @@ if ($email_type == "approach-mail") {
 // Approach Mail GEN-Z
 if ($email_type == "approach-mail-gen-z") {
     // Subject
-    $subject = "Elevate Your Business with Overseas Marketing - Tailored Solutions for Growth!";
+    $subject = "Unleash Your Business Potential Globally - Customized Solutions for Unprecedented Growth!";
     // Message Content
     $message = "
     <html>
