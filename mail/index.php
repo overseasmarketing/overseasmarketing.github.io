@@ -4,10 +4,10 @@
 <?php include '../head.php'; ?>
 
 <style>
-input,
-select {
-    box-shadow: none !important;
-}
+    input,
+    select {
+        box-shadow: none !important;
+    }
 </style>
 
 <body>
@@ -19,7 +19,7 @@ select {
                     <h1>Overseas Email Sender</h1>
                     <hr>
                     <form action="send-mail.php" method="POST">
-                        <input type="hidden" name="date" value="<?php echo date('d-m-Y'); ?>">
+                        <input type="hidden" name="sent_date" value="<?php echo date('d-m-Y'); ?>">
                         <div class="mb-3">
                             <select name="email_type" class="form-control" required>
                                 <option value="approach-mail-gen-z" selected>Email: Approach New Client GEN-Z</option>

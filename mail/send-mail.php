@@ -3,11 +3,11 @@
 $user = $_POST['user'];
 $to = $_POST['email'];
 $email_type = $_POST['email_type'];
-$date = $_POST['date'];
+$sent_date = $_POST['sent_date'];
 
 include '../admin/db-connect.php';
 
-$sql = "INSERT INTO mailsender_history (`email_type`, `user`, `email`, `date`) VALUES ('$email_type', '$user', '$to', '$date')";
+$sql = "INSERT INTO mailsender_history (`email_type`, `user`, `email`, `date`) VALUES ('$email_type', '$user', '$to', '$sent_date')";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
