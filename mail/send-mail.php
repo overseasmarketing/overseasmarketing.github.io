@@ -115,8 +115,19 @@ if ($email_type == "approach-mail-gen-z") {
         </head>
         <body>
             <div class='container'>
-                Hey, " . $user . "! Are you ready to step up your brand game? Imagine working with a team that understands your company's culture in addition to design and web development. We're not your typical techies; we're here to be your digital partners, transforming your vision into a cutting-edge online masterpiece. Let's get into the details: think sleek designs, websites that feel like they were coded with a touch of Gen Z magic, and ads that speak to the cool kids. We're not just accomplishing goals; we're leaving a digital legacy. So let's collaborate and make your brand the talk of the virtual town. Ready to slay?
+                Hey, " . $user . "! Are you ready to step up your brand game?
+                <br><br>
+                Imagine working with a team that understands your company's culture in addition to design and web development. We're not your typical techies; we're here to be your digital partners, transforming your vision into a cutting-edge online masterpiece.
+                <br><br>
+                Let's get into the details: think sleek designs, websites that feel like they were coded with a touch of Gen Z magic, and ads that speak to the cool kids. We're not just accomplishing goals; we're leaving a digital legacy.
+                <br>
+                So let's collaborate and make your brand the talk of the virtual town. Ready to slay?
+                <br><br>
                 <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>overseasmarketing.co.in</a>
+                <br><br>
+                <center>
+                    <img src='https://overseasmarketing.co.in/mail/mail-banner.png' alt='Overseas Marketing'>
+                </center>
             </div>
         </body>
     </html>
