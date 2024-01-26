@@ -4,22 +4,25 @@
 <?php include '../head.php'; ?>
 
 <style>
-input,
-select {
-    box-shadow: none !important;
-}
+    input,
+    select {
+        box-shadow: none !important;
+    }
 </style>
 
 <body>
     <div class="container-fluid bg-primary">
         <div class="container">
             <div style="height: 100vh;" class="row d-flex align-items-center  justify-content-center">
-                <div class="card w-50 p-5">
+                <div class="col-sm-12 col-md-2 col-lg-4"></div>
+                <div class="col-sm-12 col-md-8 col-lg-4 bg-white p-5">
                     <h1>Overseas Email Sender</h1>
+                    <hr>
                     <form action="send-mail.php" method="POST">
                         <div class="mb-3">
                             <select name="email_type" class="form-control" required>
-                                <option value="approach-mail" selected>Email: Approach New Client</option>
+                                <option value="approach-mail-gen-z" selected>Email: Approach New Client GEN-Z</option>
+                                <option value="approach-mail">Email: Approach New Client</option>
                             </select>
                         </div>
                         <div class="input-group mb-3">
@@ -37,6 +40,7 @@ select {
                         <button class="btn btn-primary w-100" type="submit">Send</button>
                     </form>
                 </div>
+                <div class="col-sm-12 col-md-2 col-lg-4"></div>
             </div>
         </div>
     </div>

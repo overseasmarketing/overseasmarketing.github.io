@@ -4,6 +4,7 @@ $user = $_POST['user'];
 $to = $_POST['email'];
 $email_type = $_POST['email_type'];
 
+// Approach Mail
 if ($email_type == "approach-mail") {
     // Subject
     $subject = "Elevate Your Business with Overseas Marketing - Tailored Solutions for Growth!";
@@ -101,4 +102,43 @@ if ($email_type == "approach-mail") {
 } else {
     echo "Invalid Email Type";
 }
-?>
+
+// Approach Mail GEN-Z
+if ($email_type == "approach-mail-gen-z") {
+    // Subject
+    $subject = "Elevate Your Business with Overseas Marketing - Tailored Solutions for Growth!";
+    // Message Content
+    $message = "
+    <html>
+        <head>
+            <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
+        </head>
+        <body>
+            <div class='container'>
+                Hey, " . $user . "! Are you ready to step up your brand game? Imagine working with a team that understands your company's culture in addition to design and web development. We're not your typical techies; we're here to be your digital partners, transforming your vision into a cutting-edge online masterpiece. Let's get into the details: think sleek designs, websites that feel like they were coded with a touch of Gen Z magic, and ads that speak to the cool kids. We're not just accomplishing goals; we're leaving a digital legacy. So let's collaborate and make your brand the talk of the virtual town. Ready to slay?
+                <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>overseasmarketing.co.in</a>
+            </div>
+        </body>
+    </html>
+    ";
+    // Display name for the sender
+    $fromName = "Overseas Marketing";
+    // Sender email address
+    $fromEmail = "contact@overseasmarketing.co.in";
+    // Headers
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: $fromName <$fromEmail>" . "\r\n";
+    // Send the email
+    $mailSent = mail($to, $subject, $message, $headers);
+    // Check if the email was sent successfully
+    if ($mailSent) {
+        echo "<div class='alert alert-success'>Email sent successfully!</div>";
+        echo $message;
+    } else {
+        echo "<div class='alert alert-danger'>Email not sent!</div>";
+        echo $message;
+    }
+} else {
+    echo "Invalid Email Type";
+}
