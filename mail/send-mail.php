@@ -3,6 +3,18 @@
 $user = $_POST['user'];
 $to = $_POST['email'];
 $email_type = $_POST['email_type'];
+$date = $_POST['date'];
+
+include '../admin/db-connect.php';
+
+$sql = "INSERT INTO mailsender_history (`email_type`, `user`, `email`, `date`) VALUES ('$email_type', '$user', '$to', '$date')";
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+    echo "<div class='alert alert-success'>Record: Inserted</div>";
+} else {
+    echo "<div class='alert alert-danger'>Record: Not Inserted</div>";
+}
 
 // Approach Mail
 if ($email_type == "approach-mail") {
