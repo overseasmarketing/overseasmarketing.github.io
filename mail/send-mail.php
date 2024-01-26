@@ -100,7 +100,7 @@ if ($email_type == "approach-mail") {
         echo $message;
     }
 } else {
-    echo "Invalid Email Type";
+    // echo "Invalid Email Type"; // Email Not Sent
 }
 
 // Approach Mail GEN-Z
@@ -140,5 +140,5 @@ if ($email_type == "approach-mail-gen-z") {
         echo $message;
     }
 } else {
-    echo "Invalid Email Type";
+    // echo "Invalid Email Type"; // Email Not Sent
 }
