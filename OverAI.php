@@ -41,25 +41,31 @@
 
         <div class="container p-5">
             <div class="row">
-                <div class="col-sm-12 col-md-3 col-lg-3">&nbsp;</div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-12 col-lg-3">&nbsp;</div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="badge bg-primary p-2 m-2">
                         Try OverAI's Chat Interface
                     </div>
-                    <div class="card p-3">
-                        <div class="card-body">
+                    <div class="card p-0">
+                        <div class="card-body px-2">
                             <!-- HTML Form -->
-                            <div class="alert">
+                            <div class="alert p-0 m-0">
+                                <!-- START CHAT -->
                                 <div id="chat">
-                                    <!-- Chat -->
+
+                                    <!--  -->
+
                                 </div>
+                                <!-- END CHAT -->
                                 <div class="btn-group w-100">
                                     <input class="form-control" id="prompt" name="prompt" type="text"
                                         placeholder="Enter your prompt">
                                     <button id="send_prompt_btn" onclick="makeApiCall();"
-                                        class="btn btn-dark">Send</button>
+                                        class="btn btn-dark chat-button">
+                                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                                    </button>
                                     <button style="display: none;" id="send_prompt_loading_btn"
-                                        class="btn btn-dark disabled">
+                                        class="btn btn-dark disabled chat-button">
                                         <div class="spinner-grow spinner-grow-sm" role="status">
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
@@ -72,11 +78,37 @@
                                 const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
 
                                 function addAIReply(textValue) {
+                                    const replyElement = `
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="reply">` + textValue + `</div>
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                `;
                                     const chat = document.getElementById('chat');
-                                    const reply = document.createElement('div');
-                                    reply.classList.add('reply');
-                                    reply.innerText = textValue;
-                                    chat.appendChild(reply);
+                                    chat.innerHTML += replyElement;
+                                    // console.log(textValue);
+
+                                    document.getElementById('send_prompt_btn').style.display = 'block';
+                                    document.getElementById('send_prompt_loading_btn').style.display = 'none';
+                                }
+
+                                function errorReply(textValue) {
+                                    const replyElement = `
+                                    <div class=" d-flex">
+                                        <div class="none">
+                                            <div class="reply">` + textValue + `</div>
+                                        </div>
+                                        <div class="ban">
+                                            <i class="fa fa-solid fa-ban text-danger"></i>
+                                        </div>
+                                    </div>
+                                `;
+                                    const chat = document.getElementById('chat');
+                                    chat.innerHTML += replyElement;
+                                    // console.log(textValue);
+
                                     document.getElementById('send_prompt_btn').style.display = 'block';
                                     document.getElementById('send_prompt_loading_btn').style.display = 'none';
                                 }
@@ -92,11 +124,15 @@
 
                                     // Add User Prompt
                                     const chat = document.getElementById('chat');
-                                    const prompt = document.createElement('div');
-                                    prompt.classList.add('user_input');
-                                    prompt.innerText = promptText;
-                                    chat.appendChild(prompt);
-
+                                    const userInputElement = `
+                                    <div class="row">
+                                        <div class="col-2"></div>
+                                        <div class="col-10">
+                                            <div class="user_input">` + promptText + `</div>
+                                        </div>
+                                    </div>
+                                `;
+                                    chat.innerHTML += userInputElement;
 
                                     const url =
                                         `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
@@ -128,6 +164,8 @@
                                         // Handle the result as needed
                                     } catch (error) {
                                         console.error('Error:', error.message || error);
+                                        // Error Reply
+                                        errorReply('Sorry, I am not able to understand your query. Please try again.');
                                         // Handle errors
                                     }
                                 }
@@ -135,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">&nbsp;</div>
+                <div class="col-sm-12 col-md-12 col-lg-3">&nbsp;</div>
             </div>
         </div>
 
@@ -170,14 +208,6 @@
     <!-- Footer -->
     <?php include 'footer.php'; ?>
     <!-- End Footer -->
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800, // values from 0 to 3000, with step 50ms
-        });
-    </script>
 
 </body>
 

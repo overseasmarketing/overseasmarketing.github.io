@@ -145,15 +145,6 @@
     <?php include 'footer.php'; ?>
     <!-- End Footer -->
 
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800, // values from 0 to 3000, with step 50ms
-        });
-    </script>
-
 </body>
 
 </html>

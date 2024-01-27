@@ -72,6 +72,6 @@
     }
 
     function openLink(link) {
-        window.open(link);
+        window.location.href = link;
     }
 </script>

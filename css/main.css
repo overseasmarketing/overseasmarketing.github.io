@@ -43,29 +43,45 @@
 /* AI */
 .reply {
   text-align: left;
-  background: black;
+  float: left;
+  background: #000000;
   color: white;
   padding: 15px;
   margin: 15px;
   border-radius: 15px;
-  border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px !important;
+}
+
+.ban {
+  text-align: left;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.user_input {
+  text-align: right;
+  float: right;
+  background: #dcdcdc;
+  color: black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0px !important;
+}
+
+.chat-button {
+  border-top-right-radius: 0.375rem !important;
+  border-bottom-right-radius: 0.375rem !important;
+  cursor: pointer;
+}
+
+input {
+  box-shadow: none !important;
 }
 
 #prompt {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-}
-
-.user_input {
-  text-align: right;
-  background: rgb(215, 215, 215);
-  color: black;
-  padding: 15px;
-  margin: 15px;
-  border-radius: 15px;
-  border-bottom-right-radius: 0px;
-}
-
-input {
-  box-shadow: none !important;
 }
