@@ -14,7 +14,7 @@
     <title>OverAI - Overseas Marketing</title>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="QuantumByteStudios">
+    <meta property="og:title" content="Over AI">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://overseasmarketing.co.in/OverAI">
     <meta property="og:image" content="https://overseasmarketing.co.in/img/overai_banner.png">
