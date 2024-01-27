@@ -13,6 +13,14 @@
     <!-- Title -->
     <title>OverAI - Overseas Marketing</title>
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="QuantumByteStudios">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://overseasmarketing.co.in/OverAI">
+    <meta property="og:image" content="https://overseasmarketing.co.in/img/overai_banner.png">
+    <meta property="og:description"
+        content="Step into the extraordinary realm of OverAI, a cutting-edge platform that redefines the boundaries of artificial intelligence through its seamless integration with Google Gemini. OverAI represents the pinnacle of intelligent technology, offering a myriad of features designed to enhance and elevate your digital experiences.">
+
 
     <!-- Favicons -->
     <link rel='icon' href='https://overseasmarketing.co.in/img/tube.png'>
@@ -116,10 +124,10 @@
 
                             <!-- JavaScript -->
                             <script>
-                                const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
+                            const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
 
-                                function addAIReply(textValue) {
-                                    const replyElement = `
+                            function addAIReply(textValue) {
+                                const replyElement = `
                                     <div class="row">
                                         <div class="col-10">
                                             <div class="reply">` + textValue + `</div>
@@ -127,16 +135,16 @@
                                         <div class="col-2"></div>
                                     </div>
                                 `;
-                                    const chat = document.getElementById('chat');
-                                    chat.innerHTML += replyElement;
-                                    // console.log(textValue);
+                                const chat = document.getElementById('chat');
+                                chat.innerHTML += replyElement;
+                                // console.log(textValue);
 
-                                    document.getElementById('send_prompt_btn').style.display = 'block';
-                                    document.getElementById('send_prompt_loading_btn').style.display = 'none';
-                                }
+                                document.getElementById('send_prompt_btn').style.display = 'block';
+                                document.getElementById('send_prompt_loading_btn').style.display = 'none';
+                            }
 
-                                function errorReply(textValue) {
-                                    const replyElement = `
+                            function errorReply(textValue) {
+                                const replyElement = `
                                     <div class=" d-flex">
                                         <div class="none">
                                             <div class="reply">` + textValue + `</div>
@@ -146,26 +154,26 @@
                                         </div>
                                     </div>
                                 `;
-                                    const chat = document.getElementById('chat');
-                                    chat.innerHTML += replyElement;
-                                    // console.log(textValue);
+                                const chat = document.getElementById('chat');
+                                chat.innerHTML += replyElement;
+                                // console.log(textValue);
 
-                                    document.getElementById('send_prompt_btn').style.display = 'block';
-                                    document.getElementById('send_prompt_loading_btn').style.display = 'none';
-                                }
+                                document.getElementById('send_prompt_btn').style.display = 'block';
+                                document.getElementById('send_prompt_loading_btn').style.display = 'none';
+                            }
 
-                                async function makeApiCall() {
-                                    const promptInput = document.getElementById('prompt');
-                                    const promptText = promptInput.value;
+                            async function makeApiCall() {
+                                const promptInput = document.getElementById('prompt');
+                                const promptText = promptInput.value;
 
-                                    // Disable Send Button
-                                    document.getElementById('prompt').value = '';
-                                    document.getElementById('send_prompt_btn').style.display = 'none';
-                                    document.getElementById('send_prompt_loading_btn').style.display = 'block';
+                                // Disable Send Button
+                                document.getElementById('prompt').value = '';
+                                document.getElementById('send_prompt_btn').style.display = 'none';
+                                document.getElementById('send_prompt_loading_btn').style.display = 'block';
 
-                                    // Add User Prompt
-                                    const chat = document.getElementById('chat');
-                                    const userInputElement = `
+                                // Add User Prompt
+                                const chat = document.getElementById('chat');
+                                const userInputElement = `
                                     <div class="row">
                                         <div class="col-2"></div>
                                         <div class="col-10">
@@ -173,43 +181,43 @@
                                         </div>
                                     </div>
                                 `;
-                                    chat.innerHTML += userInputElement;
+                                chat.innerHTML += userInputElement;
 
-                                    const url =
-                                        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+                                const url =
+                                    `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
 
-                                    const data = {
-                                        contents: [{
-                                            parts: [{
-                                                text: promptText
-                                            }]
+                                const data = {
+                                    contents: [{
+                                        parts: [{
+                                            text: promptText
                                         }]
-                                    };
+                                    }]
+                                };
 
-                                    const options = {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'application/json'
-                                        },
-                                        body: JSON.stringify(data)
-                                    };
+                                const options = {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(data)
+                                };
 
-                                    try {
-                                        const response = await fetch(url, options);
-                                        const result = await response.json();
+                                try {
+                                    const response = await fetch(url, options);
+                                    const result = await response.json();
 
-                                        const textValue = result.candidates[0].content.parts[0].text;
-                                        // console.log(textValue);
-                                        addAIReply(textValue);
+                                    const textValue = result.candidates[0].content.parts[0].text;
+                                    // console.log(textValue);
+                                    addAIReply(textValue);
 
-                                        // Handle the result as needed
-                                    } catch (error) {
-                                        console.error('Error:', error.message || error);
-                                        // Error Reply
-                                        errorReply('Sorry, I am not able to understand your query. Please try again.');
-                                        // Handle errors
-                                    }
+                                    // Handle the result as needed
+                                } catch (error) {
+                                    console.error('Error:', error.message || error);
+                                    // Error Reply
+                                    errorReply('Sorry, I am not able to understand your query. Please try again.');
+                                    // Handle errors
                                 }
+                            }
                             </script>
                         </div>
                     </div>
