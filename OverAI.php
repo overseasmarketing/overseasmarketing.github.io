@@ -95,8 +95,8 @@
                     <div class="badge bg-primary p-2 m-2">
                         Try OverAI's Chat Interface
                     </div>
-                    <div class="card p-0">
-                        <div class="card-body px-2">
+                    <div class="card chat-background p-0">
+                        <div class="card-body bg-transparent px-2">
                             <!-- HTML Form -->
                             <div class="alert p-0 m-0">
                                 <!-- START CHAT -->
@@ -124,27 +124,35 @@
 
                             <!-- JavaScript -->
                             <script>
-                            const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
+                                document.getElementById('prompt').addEventListener('keypress', function (event) {
+                                    if (event.key === 'Enter') {
+                                        makeApiCall();
+                                    } else {
+                                        return;
+                                    }
+                                });
 
-                            function addAIReply(textValue) {
-                                const replyElement = `
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <div class="reply">` + textValue + `</div>
+                                const apiKey = 'AIzaSyCFpWV5yV3zzVq8y5tJDO2mrIArbKHgrzQ';
+
+                                function addAIReply(textValue) {
+                                    const replyElement = `
+                                    <div class="row bg-transparent">
+                                        <div class="col-10 bg-transparent">
+                                            <div class="reply animate__animated animate__fadeIn">` + textValue + `</div>
                                         </div>
-                                        <div class="col-2"></div>
+                                        <div class="col-2 bg-transparent"></div>
                                     </div>
                                 `;
-                                const chat = document.getElementById('chat');
-                                chat.innerHTML += replyElement;
-                                // console.log(textValue);
+                                    const chat = document.getElementById('chat');
+                                    chat.innerHTML += replyElement;
+                                    // console.log(textValue);
 
-                                document.getElementById('send_prompt_btn').style.display = 'block';
-                                document.getElementById('send_prompt_loading_btn').style.display = 'none';
-                            }
+                                    document.getElementById('send_prompt_btn').style.display = 'block';
+                                    document.getElementById('send_prompt_loading_btn').style.display = 'none';
+                                }
 
-                            function errorReply(textValue) {
-                                const replyElement = `
+                                function errorReply(textValue) {
+                                    const replyElement = `
                                     <div class=" d-flex">
                                         <div class="none">
                                             <div class="reply">` + textValue + `</div>
@@ -154,70 +162,70 @@
                                         </div>
                                     </div>
                                 `;
-                                const chat = document.getElementById('chat');
-                                chat.innerHTML += replyElement;
-                                // console.log(textValue);
+                                    const chat = document.getElementById('chat');
+                                    chat.innerHTML += replyElement;
+                                    // console.log(textValue);
 
-                                document.getElementById('send_prompt_btn').style.display = 'block';
-                                document.getElementById('send_prompt_loading_btn').style.display = 'none';
-                            }
+                                    document.getElementById('send_prompt_btn').style.display = 'block';
+                                    document.getElementById('send_prompt_loading_btn').style.display = 'none';
+                                }
 
-                            async function makeApiCall() {
-                                const promptInput = document.getElementById('prompt');
-                                const promptText = promptInput.value;
+                                async function makeApiCall() {
+                                    const promptInput = document.getElementById('prompt');
+                                    const promptText = promptInput.value;
 
-                                // Disable Send Button
-                                document.getElementById('prompt').value = '';
-                                document.getElementById('send_prompt_btn').style.display = 'none';
-                                document.getElementById('send_prompt_loading_btn').style.display = 'block';
+                                    // Disable Send Button
+                                    document.getElementById('prompt').value = '';
+                                    document.getElementById('send_prompt_btn').style.display = 'none';
+                                    document.getElementById('send_prompt_loading_btn').style.display = 'block';
 
-                                // Add User Prompt
-                                const chat = document.getElementById('chat');
-                                const userInputElement = `
-                                    <div class="row">
-                                        <div class="col-2"></div>
-                                        <div class="col-10">
-                                            <div class="user_input">` + promptText + `</div>
+                                    // Add User Prompt
+                                    const chat = document.getElementById('chat');
+                                    const userInputElement = `
+                                    <div class="row bg-transparent">
+                                        <div class="col-2 bg-transparent"></div>
+                                        <div class="col-10 bg-transparent">
+                                            <div class="user_input animate__animated animate__fadeIn">` + promptText + `</div>
                                         </div>
                                     </div>
                                 `;
-                                chat.innerHTML += userInputElement;
+                                    chat.innerHTML += userInputElement;
 
-                                const url =
-                                    `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+                                    const url =
+                                        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
 
-                                const data = {
-                                    contents: [{
-                                        parts: [{
-                                            text: promptText
+                                    const data = {
+                                        contents: [{
+                                            parts: [{
+                                                text: promptText
+                                            }]
                                         }]
-                                    }]
-                                };
+                                    };
 
-                                const options = {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    },
-                                    body: JSON.stringify(data)
-                                };
+                                    const options = {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(data)
+                                    };
 
-                                try {
-                                    const response = await fetch(url, options);
-                                    const result = await response.json();
+                                    try {
+                                        const response = await fetch(url, options);
+                                        const result = await response.json();
 
-                                    const textValue = result.candidates[0].content.parts[0].text;
-                                    // console.log(textValue);
-                                    addAIReply(textValue);
+                                        const textValue = result.candidates[0].content.parts[0].text;
+                                        // console.log(textValue);
+                                        addAIReply(textValue);
 
-                                    // Handle the result as needed
-                                } catch (error) {
-                                    console.error('Error:', error.message || error);
-                                    // Error Reply
-                                    errorReply('Sorry, I am not able to understand your query. Please try again.');
-                                    // Handle errors
+                                        // Handle the result as needed
+                                    } catch (error) {
+                                        console.error('Error:', error.message || error);
+                                        // Error Reply
+                                        errorReply('Sorry, I am not able to understand your query. Please try again.');
+                                        // Handle errors
+                                    }
                                 }
-                            }
                             </script>
                         </div>
                     </div>
