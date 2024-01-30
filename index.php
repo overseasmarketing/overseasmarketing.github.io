@@ -14,7 +14,7 @@
     <main>
 
         <div class="container p-5 animate__animated animate__fadeIn">
-            HELLO USER,
+            NAMASTE!
             <h1>
                 We do marketing stuff for businesses, influencer's, startups, entrepreneurs, artists, and more.
             </h1>
@@ -31,7 +31,7 @@
             </p> -->
         </div>
 
-        <div class="container p-5">
+        <!-- <div class="container p-5">
             Dear Business Owner,
             <br><br>
             Whether you are looking to expand into new regions or simply want to increase your global brand awareness,
@@ -42,14 +42,14 @@
             Warm Regards,
             <br>
             Overseas Marketing Team
-        </div>
+        </div> -->
 
         <div class="container p-5">
             <h2>What We Offer?</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/graphic_designing.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/graphic_designing.png" alt="">
                         <p class="mt-2">
                             <b>Graphic designing</b> is the art of visual communication through the use of typography,
                             images,
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/video_editing.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/video_editing.png" alt="">
                         <p class="mt-2">
                             <b>Video editing</b> is the process of manipulating and arranging video footage to create a
                             cohesive and engaging final
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/web_development.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/web_development.png" alt="">
                         <p class="mt-2">
                             <b>Web development</b> is the process of creating and maintaining websites and web
                             applications
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/seo.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/seo.png" alt="">
                         <p class="mt-2">
                             <b>SEO</b> stands for Search Engine Optimization. It is the practice of improving a
                             website's
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/socialmedia_management.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/socialmedia_management.png" alt="">
                         <p class="mt-2">
                             <b>Social media management</b> is the process of overseeing and optimizing online platforms
                             to
@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/advertising.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/advertising.png" alt="">
                         <p class="mt-2">
                             <b>Advertising</b> is a persuasive communication tool used to promote products or services
                             through
@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/uxui.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/uxui.png" alt="">
                         <p class="mt-2">
                             <b>UX/UI</b> stands for User Experience/User Interface. It involves designing intuitive
                             interfaces
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
                     <div class="p-3 our-work-card text-white">
-                        <img class="img-fluid rounded" src="img/services/content_creation.png" alt="">
+                        <img class="img-fluid w-100 rounded" src="img/services/content_creation.png" alt="">
                         <p class="mt-2">
                             <b>Content creation</b> is the process of generating and producing engaging and valuable
                             media for
