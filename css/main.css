@@ -86,7 +86,10 @@
   color: #999;
 }
 
-input {
+input,
+button,
+textarea,
+select {
   box-shadow: none !important;
 }
 
@@ -103,4 +106,14 @@ input {
   color: #999; /* Placeholder text color */
   font-style: italic; /* Placeholder text style */
   opacity: 0.8; /* Placeholder text opacity */
+}
+
+/* Contact Form */
+.form-input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: #ffffff 1px solid !important;
+  border-radius: 0px !important;
+  padding: 10px !important;
+  color: #fff !important;
 }

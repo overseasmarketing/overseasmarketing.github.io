@@ -121,8 +121,8 @@
                                     Charak Sanjivani
                                     <span class="fs-6">
                                         <a class="text-decoration-none text-secondary"
-                                            href="https://charaksanjivani.com">
-                                            https://charaksanjivani.com
+                                            href="https://charaksanjivani.org.in">
+                                            https://charaksanjivani.org.in
                                         </a>
                                     </span>
                                 </li>
@@ -161,8 +161,8 @@
                                     Overseas Marketing:
                                     <span class="fs-6">
                                         <a class="text-decoration-none text-secondary"
-                                            href="https://overseasmarketing.in">
-                                            https://overseasmarketing.in
+                                            href="https://overseasmarketing.co.in">
+                                            https://overseasmarketing.co.in
                                         </a>
                                     </span>
                                 </li>
