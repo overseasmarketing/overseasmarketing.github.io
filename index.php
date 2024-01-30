@@ -48,7 +48,7 @@
             <h2>What We Offer?</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
-                    <div class="p-3 our-work-card text-white">
+                    <div onclick="services()" class="p-3 our-work-card text-white">
                         <img class="img-fluid w-100 rounded" src="img/services/graphic_designing.png" alt="">
                         <p class="mt-2">
                             <b>Graphic designing</b> is the art of visual communication through the use of typography,
@@ -134,6 +134,23 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+        <div class="container p-5">
+            <h2>Our Clients</h2>
+            <div class="horizontal-scroll-clients d-flex">
+                <!-- <marquee behavior="" direction=""> -->
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/code.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/ingrain.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/mb.png" alt="">
+                <!-- <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
+                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt=""> -->
+                <!-- </marquee> -->
             </div>
         </div>
 

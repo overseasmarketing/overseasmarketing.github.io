@@ -117,3 +117,26 @@ select {
   padding: 10px !important;
   color: #fff !important;
 }
+
+/* Scroll */
+.horizontal-scroll-clients {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.horizontal-scroll-clients::-webkit-scrollbar {
+  height: 5px;
+}
+
+.client-logo {
+  width: 15% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .client-logo {
+    width: 50% !important;
+  }
+}
