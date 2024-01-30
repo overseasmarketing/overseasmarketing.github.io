@@ -23,7 +23,7 @@ $result_db = mysqli_query($conn, $sql);
 // Forwarding the data to the mail
 
 // To
-$to = "contact@overseasmarketing.co.in";
+$to = "theoverseasmarketing@gmail.com";
 
 // Subject
 $subject = "New Contact Form Submission - Overseas Marketing";
@@ -126,7 +126,7 @@ $result_mail = mail($to, $subject, $message, $header);
 
 // Ending Redirect
 if ($result_db == true && $result_mail == true) {
-    header("Location: https://overseasmarketing.co.in/contact-success");
+  header("Location: https://overseasmarketing.co.in/contact-success");
 } else {
-    echo "<br>An Error Occurred<br>" . mysqli_error($conn);
+  echo "<br>An Error Occurred<br>" . mysqli_error($conn);
 }

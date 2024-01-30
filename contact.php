@@ -347,24 +347,24 @@
                                 </div>
                             </div>
                             <script>
-                            function validatePhoneNumber(input) {
-                                var numericRegex = /^\d+$/;
-                                if (!numericRegex.test(input.value)) {
-                                    const errorAlertElement = `
+                                function validatePhoneNumber(input) {
+                                    var numericRegex = /^\d+$/;
+                                    if (!numericRegex.test(input.value)) {
+                                        const errorAlertElement = `
                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                             <i class="fa-solid fa-triangle-exclamation"></i>
                                             Only numeric values are allowed
                                             <button type="button" class="btn-close end" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
                                         `;
-                                    document.getElementById('phoneNumberError').innerHTML = errorAlertElement;
-                                    input.value = input.value.substring(0, input.value.length - 1);
-                                    return false
-                                } else {
-                                    document.getElementById('phoneNumberError').innerHTML = '';
-                                    return false
+                                        document.getElementById('phoneNumberError').innerHTML = errorAlertElement;
+                                        input.value = input.value.substring(0, input.value.length - 1);
+                                        return false
+                                    } else {
+                                        document.getElementById('phoneNumberError').innerHTML = '';
+                                        return false
+                                    }
                                 }
-                            }
                             </script>
 
                             <div class="col-12 mt-3">

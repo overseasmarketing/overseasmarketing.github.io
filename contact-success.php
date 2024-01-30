@@ -23,17 +23,25 @@
             </h1>
         </div>
 
-        <div class="w-50 container p-5">
-            Dear Business Owner,
-            <br><br>
-            Whether you are looking to expand into new regions or simply want to increase your global brand awareness,
-            we have the expertise and resources to help you achieve your goals. With a team of experienced
-            professionals, we offer a wide range of digital marketing services. Trust us to help you navigate the
-            complexities of the global marketplace and drive your brand to new heights of success.
-            <br><br>
-            Warm Regards,
-            <br>
-            Overseas Marketing Team
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4"></div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    Dear Business Owner,
+                    <br><br>
+                    Whether you are looking to expand into new regions or simply want to increase your global brand
+                    awareness,
+                    we have the expertise and resources to help you achieve your goals. With a team of experienced
+                    professionals, we offer a wide range of digital marketing services. Trust us to help you navigate
+                    the
+                    complexities of the global marketplace and drive your brand to new heights of success.
+                    <br><br>
+                    Warm Regards,
+                    <br>
+                    Overseas Marketing Team
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4"></div>
+            </div>
         </div>
 
         <br>
