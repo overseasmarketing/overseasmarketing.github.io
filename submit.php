@@ -82,7 +82,7 @@ $message = "
     <th>Field</th>
     <th>Data</th>
     <tr>
-      <td>Full Name</td>
+      <td>Name</td>
       <td>" . $name . "</td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@ $message = "
       <td><a class='text-decoration-none' href='mailto:" . $email . "'>" . $email . "</a></td>
     </tr>
     <tr>
-      <td>Phone Number</td>
+      <td>Phone</td>
       <td><a class='text-decoration-none' href='tel:" . $phone . "'>" . $phone . "</a></td>
     </tr>
     <tr>
