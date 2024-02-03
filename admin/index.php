@@ -13,7 +13,7 @@
 
         <button style="border-bottom-right-radius: 15px !important;" class="btn btn-primary rounded-0" type="button"
             data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
-            NavMenu
+            Menu
         </button>
 
         <div class="container-fluid m-0 p-0">
