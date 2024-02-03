@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $USERNAME = $_POST["username"];
     $PASSWORD = $_POST["password"];
-    $LAST_LOGIN = $_POST["last_login"];
+    $DATE = $_POST["date"];
 
     // Fetch USERNAME & PASSWORDS from a 'admin_users'
-    $sql = "SELECT * FROM admin_users WHERE username ='$USERNAME' AND password ='$PASSWORD'";
+    $sql = "SELECT * FROM `admin_users` WHERE `username` = '$USERNAME' AND `password` = '$PASSWORD' AND `date` = '$DATE'";
 
     $result = mysqli_query($conn, $sql);
 
@@ -37,11 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['URL'] = $settings_url;
         // SESSION VARIABLE : DOMAIN
         $_SESSION['DOMAIN'] = $settings_domain;
-
-        // UPDATE LAST LOGIN
-        $sql = "UPDATE admin_users SET last_login_date='$LAST_LOGIN' WHERE username='$USERNAME'";
-        $result = mysqli_query($conn, $sql);
-
         // Redirect
         header("location: index.php");
     } else {
@@ -50,10 +45,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if ($login) {
-    echo 'Logged In'; // DEBUG : Works when not redirected to index.php
+    echo '
+    <script>
+        console.log("Logged In!");
+    </script>
+    ';
 }
 if ($showError) {
-    echo '<script>alert("Incorrect Username or Password!");</script>';
+    echo '
+    <script>
+        alert("Incorrect Username or Password!");
+    </script>
+    ';
 }
 
 ?>
@@ -61,43 +64,37 @@ if ($showError) {
 <body>
 
     <main>
+        <div class="container-fluid bg-dark">
+            <div style="height: 100vh;" class="d-flex justify-content-center align-items-center">
+                <div class="card glass-card p-5">
+                    <div class="card-body">
+                        <h1 style="font-weight: bold; text-align: center;">QUADMIN</h1>
+                        <p style="font-size: small; text-align: center; font-style: italic;">
+                            Login to your Quadmin Account
+                        </p>
+                        <hr>
+                        <form method="POST" action="login.php">
+                            <!-- Username input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="username">Username</label>
+                                <input type="username" name="username" id="username" class="form-control"
+                                    autocomplete="off">
+                            </div>
 
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    autocomplete="off">
+                            </div>
 
-        <div style="width: 100vw; height: 100vh;" class="container d-flex align-items-center justify-content-center">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card p-3 m-3">
-                        <div class="card-body">
-                            <h1 style="font-weight: bold; text-align: center;">QUADMIN</h1>
-                            <p style="font-size: small; text-align: center; font-style: italic;">
-                                Login to your Quadmin Account
-                            </p>
-                            <hr>
-                            <form method="POST" action="login.php">
-                                <!-- Username input -->
-                                <div class="form-outline mb-4">
-                                    <input type="username" name="username" id="username" class="form-control"
-                                        autocomplete="off" />
-                                    <label class="form-label" for="username">Username</label>
-                                </div>
+                            <!-- Login Date -->
+                            <input type="hidden" name="date" value="<?php echo date('d-m-Y'); ?>" id="date"
+                                class="form-control" readonly>
 
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <input type="password" name="password" id="password" class="form-control"
-                                        autocomplete="off" />
-                                    <label class="form-label" for="password">Password</label>
-                                </div>
-
-                                <!-- Current Date input (hidden) -->
-                                <div class="form-outline mb-4">
-                                    <input type="text" name="last_login" id="last_login" class="form-control"
-                                        value="<?php echo date("d-m-Y"); ?>" hidden>
-                                </div>
-
-                                <!-- Submit button -->
-                                <button type="submit" class="btn btn-dark btn-block">Log in</button>
-                            </form>
-                        </div>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-light w-100">Log in</button>
+                        </form>
                     </div>
                 </div>
             </div>

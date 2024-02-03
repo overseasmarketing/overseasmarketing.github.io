@@ -6,38 +6,37 @@
 <!-- Header -->
 <?php include 'head.php'; ?>
 
-<body>
-    <div class="container">
-        <!-- CONTAINER START -->
-        <!-- Section: Intro -->
-        <div class="alert alert-primary">
-            Send Emails
+<body class="bg-dark text-white">
+    <div class="container-fluid p-5">
+
+        <div class="introduction">
+            <div class="alert p-0 m-0">
+                <h1>
+                    Mail Sender
+                </h1>
+            </div>
+            <p>
+                You can use this form below to send emails to anyone using your webserver.
+            </p>
+            <hr>
         </div>
-        <div class="alert p-0 m-0">
-            <h1>Welcome,
-                <?php echo $_SESSION['name']; ?>
-            </h1>
-        </div>
-        <p>
-            You can use this form below to send emails to anyone using your webserver.
-        </p>
-        <hr>
+
         <!-- Section: Cards -->
         <div class="row">
             <!-- Card Zero -->
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 my-1">
-                <div class="card h-100">
+                <div class="card glass-card h-100">
                     <div class="card-body">
                         <form action="mail-sender.php" method="post">
 
-                            <div class="alert alert-light">
+                            <div class="alert alert-outline">
                                 <?php echo "From: noreply@" . $_SESSION['DOMAIN']; ?>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="to" name="mail-to" class="form-control" required />
                                 <label class="form-label" for="to">To:</label>
+                                <input type="email" id="to" name="mail-to" class="form-control" required />
                             </div>
 
                             <?php
@@ -52,22 +51,20 @@
 
                             <!-- Subject input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="subject" name="mail-subject" class="form-control" required />
                                 <label class="form-label" for="subject">Subject:</label>
+                                <input type="text" id="subject" name="mail-subject" class="form-control" required />
                             </div>
 
                             <!-- Message input -->
                             <div class="form-outline mb-4">
+                                <label class="form-label" for="message">Message:</label>
                                 <textarea class="form-control" id="message" name="mail-message" rows="4"
                                     required></textarea>
-                                <label class="form-label" for="message">Message:</label>
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">
-                                <i class="fa-solid fa-paper-plane"></i>
-                                &nbsp;
-                                Send EMail
+                            <button type="submit" class="btn btn-light btn-block mb-4">
+                                Send Mail
                             </button>
                         </form>
                     </div>

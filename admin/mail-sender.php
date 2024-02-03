@@ -59,16 +59,32 @@ if ($result_mail == true) {
 }
 
 echo "
-<div class='p-5'>
-    --EMAIL CONTENTS--
-    <br>
-    <span>
-        TO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $to . "<br>
-        FROM:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $from . "<br>
-        SUBJECT:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $subject . "<br>
-        MESSAGE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $message . "<br>
-    </span>
-</div>
+<body class='bg-dark text-white'>
+    <div class='p-5'>
+        <div class='alert'>
+            EMAIL CONTENTS
+        </div>
+        <br>
+        <table class='table'>
+                <tr>
+                    <td>TO:</td>
+                    <td>" . $TO . "</td>
+                </tr>
+                <tr>
+                    <td>SUBJECT:</td>
+                    <td>" . $SUBJECT . "</td>
+                </tr>
+                <tr>
+                    <td>FROM:</td>
+                    <td>" . $FROM . "</td>
+                </tr>
+                <tr>
+                    <td>MESSAGE:</td>
+                    <td>" . $MESSAGE . "</td>
+                </tr>
+        </table>
+    </div>
+</body>
 ";
 
 // Footer

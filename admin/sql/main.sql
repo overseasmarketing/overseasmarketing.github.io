@@ -5,31 +5,12 @@ CREATE TABLE
         `name` VARCHAR(32) NOT NULL,
         `username` VARCHAR(32) NOT NULL,
         `password` VARCHAR(32) NOT NULL,
-        `last_login_date` VARCHAR(32) NOT NULL,
+        `date` VARCHAR(32) NOT NULL,
         PRIMARY KEY (`id`)
     ) ENGINE = InnoDB;
 
 -- ADD TEST USER AT 'admin_users'
 INSERT INTO
-    `admin_users` (
-        `id`,
-        `name`,
-        `username`,
-        `password`,
-        `last_login_date`
-    )
+    `admin_users` (`id`, `name`, `username`, `password`, `date`)
 VALUES
-    (
-        NULL,
-        'Harshit Raheja',
-        'harshit',
-        'Harshit@2003',
-        ''
-    ),
-    (
-        NULL,
-        'Ishwar Chawla',
-        'ishwar',
-        'Ishwar@2004',
-        ''
-    );
+    (NULL, '', '', '', '');

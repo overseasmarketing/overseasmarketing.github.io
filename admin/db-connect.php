@@ -10,7 +10,7 @@ if ($getClient == "localhost") {
   $SERVER_NAME = "localhost";
   $USERNAME = "root";
   $PASSWORD = "";
-  $DATABASE = $DB_DATABASE_LOCAL;
+  $DATABASE = $DB_DATABASE;
 } else {
   // Connect to database  
   // ACTUAL SERVER

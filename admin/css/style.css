@@ -1,3 +1,7 @@
+body {
+  font-family: "Inter" !important;
+}
+
 iframe {
   position: absolute;
   width: -webkit-fill-available;
@@ -6,6 +10,24 @@ iframe {
 
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px !important;
 }
 
 /* Other */
@@ -45,4 +67,51 @@ tr:hover {
 .table-name {
   color: magenta;
   font-style: italic;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  border-radius: 0px !important;
+}
+
+/* Card */
+.glass-card {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 8px 32px 0 rgba(115, 115, 115, 0.37); */
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* width: 25% !important; */
+}
+
+/* Scroll */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
