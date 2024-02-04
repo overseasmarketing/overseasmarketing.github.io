@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DATE = $_POST["date"];
 
     // Fetch USERNAME & PASSWORDS from a 'admin_users'
-    $sql = "SELECT * FROM `admin_users` WHERE `username` = '$USERNAME' AND `password` = '$PASSWORD' AND `date` = '$DATE'";
+    $sql = "SELECT * FROM `admin_users` WHERE `username` = '$USERNAME';";
 
     $result = mysqli_query($conn, $sql);
 
@@ -37,8 +37,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['URL'] = $settings_url;
         // SESSION VARIABLE : DOMAIN
         $_SESSION['DOMAIN'] = $settings_domain;
-        // Redirect
-        header("location: index.php");
+
+
+        // Update Date
+        $sql = "UPDATE `admin_users` SET `last_login` = '$DATE' WHERE `username` = '$USERNAME';";
+        $result = mysqli_query($conn, $sql);
+
+        if (!$result) {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        } else {
+            // Redirect
+            header("location: index.php");
+        }
+
     } else {
         $showError = "<script>alert('Invalid Credentials');</script>";
     }
