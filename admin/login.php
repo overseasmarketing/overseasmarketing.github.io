@@ -40,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         // Update Date
-        $sql = "UPDATE `admin_users` SET `last_login` = '$DATE' WHERE `username` = '$USERNAME';";
+        $sql = "UPDATE `admin_users` SET `date` = '$DATE' WHERE `username` = '$USERNAME';";
         $result = mysqli_query($conn, $sql);
 
         if (!$result) {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         } else {
             // Redirect
-            header("location: index.php");
+            header("location: index");
         }
 
     } else {

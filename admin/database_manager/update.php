@@ -26,7 +26,7 @@ if (isset($_GET['table']) && isset($_GET['id'])) {
     // Execute the update
     if ($conn->query($sql)) {
         echo "<script>notification('Record updated successfully.')</script>";
-        header("Location: index.php?table={$selectedTable}");
+        header("Location: index?table={$selectedTable}");
     } else {
         echo "<script>
 notification('Error updating record: " . $conn->error . "')

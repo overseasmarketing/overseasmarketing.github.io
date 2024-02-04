@@ -24,7 +24,7 @@ if (isset($_GET['table']) && isset($_GET['id'])) {
     // Execute the delete
     if ($stmt->execute()) {
         echo "<script>notification('Record deleted successfully.')</script>";
-        header("Location: index.php?table={$selectedTable}");
+        header("Location: index?table={$selectedTable}");
     } else {
         echo "<script>notification('Error deleting record: " . $stmt->error . "')</script>";
     }
