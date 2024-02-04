@@ -24,7 +24,7 @@ include '../db-connect.php';
     <link rel="stylesheet" href="../css/style.css">
     <!-- JS -->
     <script src="../js/main.js"></script>
-    <script src="../js/post.js"></script>
+    <script src="../js/post.js" defer></script>
     <!-- Scripts -->
     <script>
         let clientDevice = checkClientDevice();

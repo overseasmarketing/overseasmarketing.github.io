@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- JS -->
     <script src="js/main.js"></script>
-    <script src="js/post.js"></script>
+    <script src="js/post.js" defer></script>
     <!-- Inner Scripts -->
     <script>
         // Redirect to index if device width is less than 1000px

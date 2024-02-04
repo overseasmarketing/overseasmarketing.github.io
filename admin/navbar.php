@@ -9,17 +9,33 @@
     </div>
     <div class="offcanvas-body">
         <button class="btn btn-light w-100 mt-2 text-left" onclick="changeFrameSrc('home')" data-bs-dismiss="offcanvas">
+            <span class="icon">
+                <i class="fa fa-solid fa-house"></i>
+                &nbsp;
+            </span>
             Home
         </button>
-        <button class="btn btn-primary w-100 mt-2 text-left" onclick="changeFrameSrc('database_manager/')"
+        <button class="btn btn-light w-100 mt-2 text-left" onclick="changeFrameSrc('database_manager/')"
             data-bs-dismiss="offcanvas">
+            <span class="icon">
+                <i class="fa fa-solid fa-database"></i>
+                &nbsp;
+            </span>
             DB Manager
         </button>
         <button class="btn btn-light w-100 mt-2 text-left" onclick="changeFrameSrc('send-mail')"
             data-bs-dismiss="offcanvas">
+            <span class="icon">
+                <i class="fa fa-solid fa-envelope"></i>
+                &nbsp;
+            </span>
             Mail Sender
         </button>
         <button class="btn btn-danger w-100 mt-2 text-left" onclick="logout()" data-bs-dismiss="offcanvas">
+            <span class="icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                &nbsp;
+            </span>
             Logout
         </button>
     </div>

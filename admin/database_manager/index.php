@@ -57,10 +57,12 @@ if (isset($_GET['table'])) {
         foreach ($row as $value) {
             echo "<td>{$value}</td>";
         }
+        $editLink = '"edit.php?table=' . $selectedTable . '&id=' . $row['id'] . '"';
+        $deleteLink = '"delete.php?table=' . $selectedTable . '&id=' . $row['id'] . '"';
         // Add action buttons
         echo "<td>
-                <a class='btn btn-secondary btn-sm' href='edit.php?table={$selectedTable}&id={$row['id']}'><i class='fa fa-solid fa-pen'></i></a>
-                <a class='btn btn-secondary btn-sm' href='delete.php?table={$selectedTable}&id={$row['id']}'><i class='fa fa-solid fa-trash'></i></a>
+                <a class='btn btn-secondary btn-sm' onclick='confirmAction({$editLink})'><i class='fa fa-solid fa-pen'></i></a>
+                <a class='btn btn-secondary btn-sm' onclick='confirmAction({$deleteLink})'><i class='fa fa-solid fa-trash'></i></a>
               </td>";
         echo "</tr>";
     }
@@ -68,7 +70,7 @@ if (isset($_GET['table'])) {
     echo "</table>";
 
     // Add button for adding new data
-    echo "<a class='btn btn-success' href='add.php?table={$selectedTable}'>Add New</a>";
+    // echo "<a class='btn btn-success' href='add.php?table={$selectedTable}'>Add New</a>";
 
     $stmt->close();
 }
