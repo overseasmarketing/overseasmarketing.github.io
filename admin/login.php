@@ -18,11 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DATE = $_POST["date"];
 
     // Fetch USERNAME & PASSWORDS from a 'admin_users'
-    $sql = "SELECT * FROM `admin_users` WHERE `username` = '$USERNAME';";
+    $sql = "SELECT * FROM admin_users WHERE username = '$USERNAME' AND password = '$PASSWORD'";
 
     $result = mysqli_query($conn, $sql);
 
     $row = mysqli_fetch_array($result);
+
     // $fullname = $row['fullname'];
 
     $num = mysqli_num_rows($result);

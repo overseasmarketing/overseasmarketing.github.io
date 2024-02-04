@@ -49,10 +49,10 @@
                                 </center>
                             </div>
                             <script>
-                                setTimeout(() => {
-                                    document.getElementById("loading").style.display = "none";
-                                    document.getElementById("result").style.display = "block";
-                                }, 2000)
+                            setTimeout(() => {
+                                document.getElementById("loading").style.display = "none";
+                                document.getElementById("result").style.display = "block";
+                            }, 2000)
                             </script>
                             <div class="animate_animated animate_fadeIn" id="result" style="display: none;">
                                 <?php
@@ -119,10 +119,10 @@
                                 </center>
                             </div>
                             <script>
-                                setTimeout(() => {
-                                    document.getElementById("loading_health-check").style.display = "none";
-                                    document.getElementById("result_health-check").style.display = "block";
-                                }, 2000)
+                            setTimeout(() => {
+                                document.getElementById("loading_health-check").style.display = "none";
+                                document.getElementById("result_health-check").style.display = "block";
+                            }, 2000)
                             </script>
                             <div class="animate_animated animate_fadeIn" id="result_health-check"
                                 style="display: none;">
@@ -154,15 +154,18 @@
                                 // Check the HTTP status and load time
                                 if ($http_status == 200) {
                                     if ($load_time > 3) {
-                                        echo "Warning: Website load time is greater than 3 seconds. Load time: " . round($load_time, 2) . " seconds.\n";
+                                        echo "<span class='text-warning p-2 m-2'><i class='fa-solid fa-xmark'></i>
+                                        &nbsp;WARNING: WEBSITE LOAD TIME IS GREATER THAN 3 SECONDS. LOAD TIME: " . round($load_time, 2) . " SECONDS";
                                     } elseif ($load_time > 10) {
-                                        echo "Danger: Website load time is dangerously high! Load time: " . round($load_time, 2) . " seconds.\n";
+                                        echo "<span class='text-danger p-2 m-2'><i class='fa-solid fa-xmark'></i>
+                                        &nbsp;Danger: WEBSITE LOAD TIME IS DANGEROUSLY HIGH! LOAD TIME: " . round($load_time, 2) . " SECONDS</span>";
                                     } else {
                                         echo "<span class='text-success p-2 m-2'><i class='fa-regular fa-circle-check'></i>
                                         &nbsp;LOAD TIME: " . round($load_time, 2) . " SECONDS</span>";
                                     }
                                 } else {
-                                    echo "Website is not healthy. HTTP status code: $http_status\n";
+                                    echo "<span class='text-danger p-2 m-2'><i class='fa-solid fa-xmark'></i>
+                                        &nbsp;WEBSITE IS NOT HEALTHY. HTTP STATUS CODE: $http_status</span>";
                                 }
                                 ?>
                             </div>
