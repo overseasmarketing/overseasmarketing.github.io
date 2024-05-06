@@ -50,8 +50,8 @@
                             <script>
                                 // Questions and Timer
                                 let QuestionsAndDuration = [
-                                    ["Introduce yourself and what are your qualifications?", 60],
-                                    ["What are your past experiences?", 60],
+                                    ["Introduce yourself and what are your qualifications?", 15],
+                                    ["What are your past experiences?", 15],
                                 ]
 
 
