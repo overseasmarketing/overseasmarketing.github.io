@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["video"])) {
     // Set target directory with today's date
-    $targetDir = "recordings/" . date("Y-m-d") . time() . "/";
+    $targetDir = "recordings/" . date("Y-m-d") . "--" . time() . "/";
 
     // Create directory if it doesn't exist
     if (!is_dir($targetDir)) {
