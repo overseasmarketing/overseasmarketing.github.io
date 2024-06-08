@@ -58,7 +58,7 @@
                             <p class="text-white">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a href="https://www.instagram.com/deadwithasmile_/"
+                                    <a href="https://www.instagram.com/_ishwar_chawla_/"
                                         class="text-decoration-none">Instagram</a>
                                 </li>
                                 <li class="nav-item">

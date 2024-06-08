@@ -36,7 +36,7 @@
 
                 <div class="row d-flex align-items-start m-5 p-5" data-aos="fade-right">
                     <div class="col-6">
-                        <img class="img-fluid partners-logo" src="img/inc.png" alt="">
+                        <img class="img-fluid partners-logo" src="img/nsc.png" alt="">
                     </div>
                     <div class="col-6">
                         <img class="img-fluid partners-logo" src="img/qb.png" alt="">
