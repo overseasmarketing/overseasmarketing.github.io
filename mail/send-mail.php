@@ -1,7 +1,13 @@
 <?php
 
-$user = $_POST['user'];
-$to = $_POST['email'];
+$user = $_POST['user'] ?? "Unknown";
+$to = $_POST['email'] ?? null;
+
+if (empty($to)) {
+    echo "<div class='alert alert-danger'>Email: Required</div>";
+    exit();
+}
+
 $email_type = $_POST['email_type'];
 $sent_date = $_POST['sent_date'];
 
@@ -12,8 +18,10 @@ $result = mysqli_query($conn, $sql);
 
 if ($result) {
     echo "<div class='alert alert-success'>Record: Inserted</div>";
+    exit();
 } else {
     echo "<div class='alert alert-danger'>Record: Not Inserted</div>";
+    exit();
 }
 
 // Approach Mail
@@ -115,10 +123,10 @@ if ($email_type == "approach-mail") {
     // echo "Invalid Email Type"; // Email Not Sent
 }
 
-// Approach Mail GEN-Z
-if ($email_type == "approach-mail-gen-z") {
+// Approach Mail approach-mail-payment-gateway
+if ($email_type == "approach-mail-payment-gateway") {
     // Subject
-    $subject = "Unleash Your Business Potential Globally - Customized Solutions for Unprecedented Growth!";
+    $subject = "Simplify Payments with Our Integrated Gateway Solution";
     // Message Content
     $message = "
     <html>
@@ -129,22 +137,32 @@ if ($email_type == "approach-mail-gen-z") {
 
     <body>
         <div class='container'>
-            Hey, " . $user . "! Are you ready to step up your brand game?
+            I hope this message finds you well.
             <br><br>
-            Imagine working with a team that understands your company's culture in addition to design and web development.
-            We're not your typical techies; we're here to be your digital partners, transforming your vision into a
-            cutting-edge online masterpiece.
+            Over 23% of customers abandon their carts due to complex payment systems. We can help you fix that with our
+            seamless integrated payment gateway, ensuring a smooth and secure checkout process directly on your website.
             <br><br>
-            Let's get into the details: think sleek designs, websites that feel like they were coded with a touch of Gen Z
-            magic, and ads that speak to the cool kids. We're not just accomplishing goals; we're leaving a digital legacy.
-            <br>
-            So let's collaborate and make your brand the talk of the virtual town. Ready to slay?
+            Benefits of Our Solution:
             <br><br>
-            <a href='https://overseasmarketing.co.in' style='text-decoration:none;'>overseasmarketing.co.in</a>
+            <li>
+                Easy Customization: Tailor the integration to match your business needs.<br>
+            </li>
+            <li>
+                Simplified Checkout: No redirection, providing a smooth user experience.<br>
+            </li>
+            <li>
+                Increased Revenue: Reduce cart abandonment and boost sales.<br>
+            </li>
+            <li>
+                Security and Support: Advanced security measures and dedicated support.<br>
+            </li>
             <br><br>
-            <center>
-                <img class='img-fluid' src='https://overseasmarketing.co.in/mail/mail-banner.png' alt='Overseas Marketing'>
-            </center>
+            Let’s get started! Reply to this email or contact us at <a href='tel+919090503838'>+91 90905 03838</a> to
+            schedule a consultation.
+            <br><br>
+            Best regards,<br>
+            Overseas Marketing<br>
+            <a href='https://overseasmarketing.co.in/'>overseasmarketing.co.in</a><br>
         </div>
     </body>
 

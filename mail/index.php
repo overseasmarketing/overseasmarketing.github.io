@@ -4,10 +4,10 @@
 <?php include '../head.php'; ?>
 
 <style>
-    input,
-    select {
-        box-shadow: none !important;
-    }
+input,
+select {
+    box-shadow: none !important;
+}
 </style>
 
 <body>
@@ -22,7 +22,8 @@
                         <input type="hidden" name="sent_date" value="<?php echo date('d-m-Y'); ?>">
                         <div class="mb-3">
                             <select name="email_type" class="form-control" required>
-                                <option value="approach-mail-gen-z" selected>Email: Approach New Client GEN-Z</option>
+                                <option value="approach-mail-payment-gateway" selected>Email: Approach Payment Gateway
+                                </option>
                                 <option value="approach-mail">Email: Approach New Client</option>
                             </select>
                         </div>
