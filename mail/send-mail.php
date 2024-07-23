@@ -1,6 +1,11 @@
 <?php
 
-$user = $_POST['user'] ?? "Unknown";
+$user = $_POST['user'];
+
+if (empty($user)) {
+    $user = "<span class='text-danger'>Unknown</span>";
+}
+
 $to = $_POST['email'] ?? null;
 
 if (empty($to)) {
