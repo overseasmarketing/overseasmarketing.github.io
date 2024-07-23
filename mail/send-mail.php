@@ -18,10 +18,8 @@ $result = mysqli_query($conn, $sql);
 
 if ($result) {
     echo "<div class='alert alert-success'>Record: Inserted</div>";
-    exit();
 } else {
     echo "<div class='alert alert-danger'>Record: Not Inserted</div>";
-    exit();
 }
 
 // Approach Mail

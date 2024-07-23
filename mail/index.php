@@ -4,10 +4,10 @@
 <?php include '../head.php'; ?>
 
 <style>
-input,
-select {
-    box-shadow: none !important;
-}
+    input,
+    select {
+        box-shadow: none !important;
+    }
 </style>
 
 <body>
@@ -31,7 +31,7 @@ select {
                             <span class="input-group-text">
                                 <i class="fa fa-user"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Username" name="user" required>
+                            <input type="text" class="form-control" placeholder="Username" name="user">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">
