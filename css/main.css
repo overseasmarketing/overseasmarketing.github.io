@@ -134,10 +134,39 @@ select {
 
 .client-logo {
   width: 15% !important;
+  filter: grayscale(1);
+  opacity: 0.3;
+  transition: 200ms;
+}
+
+.client-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  padding: 10px;
+  transition: 200ms;
 }
 
 @media screen and (max-width: 768px) {
   .client-logo {
     width: 50% !important;
   }
+}
+
+.partners-logo {
+  width: 50% !important;
+  filter: grayscale(1);
+  opacity: 0.3;
+  transition: 200ms;
+}
+
+.partners-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: 200ms;
+}
+
+/* Text */
+.text-link {
+  color: dodgerblue !important;
+  text-decoration: none !important;
 }

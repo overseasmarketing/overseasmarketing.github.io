@@ -140,18 +140,19 @@
 
         <div class="container p-5">
             <h2>Our Clients</h2>
-            <div class="horizontal-scroll-clients d-flex">
-                <!-- <marquee behavior="" direction=""> -->
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/code.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/ingrain.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/mb.png" alt="">
-                <!-- <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt="">
-                <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/.png" alt=""> -->
-                <!-- </marquee> -->
-            </div>
+            <!-- <div class="horizontal-scroll-clients d-flex"> -->
+            <!-- <marquee behavior="" direction=""> -->
+            <!-- <img class="img-fluid m-1 rounded-circle client-logo" src="img/clients/code.png" alt=""> -->
+            <?php
+            $directory = 'img/clients';
+            $images = glob($directory . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+
+            foreach ($images as $image) {
+                echo '<img class="img-fluid m-1 rounded-circle client-logo cursor-pointer" src="' . $image . '" alt="">';
+            }
+            ?>
+            <!-- </marquee> -->
+            <!-- </div> -->
         </div>
 
     </main>
