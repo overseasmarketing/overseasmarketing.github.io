@@ -14,7 +14,7 @@
     <main>
 
         <div class="container p-5 animate__animated animate__fadeIn">
-            NAMASTE!
+            Namaste,
             <h1>
                 We do marketing stuff for businesses, influencer's, startups, entrepreneurs, artists, and more.
             </h1>
