@@ -10,12 +10,12 @@
             </div>
             <div class="col-2">
                 <center>
-                    <button style="box-shadow: none; border: none; transition: 200ms;"
+                    <button onclick="navbarIcon()" style="box-shadow: none; border: none; transition: 200ms;"
                         class="navbar-toggler navbar-button bg-light text-dark" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <i onclick="showClose()" style="display: block;" id="bars" class="fa fa-solid fa-bars p-2"></i>
-                        <i onclick="showBars()" style="display: none;" id="close" class="fa fa-solid fa-xmark p-2"></i>
+                        <i id="bar-icon" style="display: block;" class="fa fa-solid fa-bars p-2"></i>
+                        <i id="x-icon" style="display: none;" class="fa fa-solid fa-xmark p-2"></i>
                     </button>
                 </center>
             </div>
@@ -27,30 +27,16 @@
                                 onclick="openLink('https://overseasmarketing.co.in');">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/services')">Services</a>
+                            <a class="nav-link cursor-pointer" onclick="openLink('services')">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/about')">About</a>
+                            <a class="nav-link cursor-pointer" onclick="openLink('about')">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/contact')">Contact</a>
+                            <a class="nav-link cursor-pointer" onclick="openLink('contact')">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/work')">Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/partners')">Partners</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in/OverAI')">
-                                OverAI <span class="badge bg-primary">NEW</span>
-                            </a>
+                            <a class="nav-link cursor-pointer" onclick="openLink('work')">Work</a>
                         </li>
                     </ul>
                 </div>
@@ -61,14 +47,17 @@
 
 <script>
     // Navbar
-    function showClose() {
-        document.getElementById("close").style.display = "block";
-        document.getElementById("bars").style.display = "none";
-    }
+    function navbarIcon() {
+        let barIcon = document.getElementById('bar-icon');
+        let xIcon = document.getElementById('x-icon');
 
-    function showBars() {
-        document.getElementById("bars").style.display = "block";
-        document.getElementById("close").style.display = "none";
+        if (barIcon.style.display === 'block') {
+            barIcon.style.display = 'none';
+            xIcon.style.display = 'block';
+        } else {
+            barIcon.style.display = 'block';
+            xIcon.style.display = 'none';
+        }
     }
 
     function openLink(link) {

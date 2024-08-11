@@ -32,9 +32,77 @@
                             </p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/graphic_designing.png" alt="">
+                                <p class="mt-2">
+                                    <b>Graphic designing</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/video_editing.png" alt="">
+                                <p class="mt-2">
+                                    <b>Video editing</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/web_development.png" alt="">
+                                <p class="mt-2">
+                                    <b>Web development</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/seo.png" alt="">
+                                <p class="mt-2">
+                                    <b>SEO</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/socialmedia_management.png"
+                                    alt="">
+                                <p class="mt-2">
+                                    <b>Social media management</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/advertising.png" alt="">
+                                <p class="mt-2">
+                                    <b>Advertising</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/uxui.png" alt="">
+                                <p class="mt-2">
+                                    <b>UX/UI</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3 mt-3">
+                            <div onclick="services()" class="p-3 our-work-card text-white">
+                                <img class="img-fluid w-100 rounded" src="img/services/content_creation.png" alt="">
+                                <p class="mt-2">
+                                    <b>Content creation</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-12 col-lg-10 col-xl-8">
+
+                <!-- <div class="col-12 col-lg-10 col-xl-8">
                     <div class="row d-flex align-items-start" data-aos="fade-right">
                         <div class="col-12">
                             <h2 class="h3 mt-5 border-top pt-5">01. Graphic Designing</h2>
@@ -134,7 +202,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
             </div>
 
         </div>
