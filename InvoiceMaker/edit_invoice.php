@@ -17,7 +17,7 @@
         $invoice = null;
 
         if ($invoiceID > 0) {
-            $sql = "SELECT * FROM Invoices WHERE InvoiceID = $invoiceID";
+            $sql = "SELECT * FROM invoices WHERE InvoiceID = $invoiceID";
             $result = $conn->query($sql);
             if ($result->num_rows == 1) {
                 $invoice = $result->fetch_assoc();
@@ -44,7 +44,7 @@
                         <label for="ClientID" class="form-label">Client ID</label>
                         <select class="form-control" id="ClientID" name="ClientID" required>
                             <?php
-                            $sql = "SELECT * FROM Clients";
+                            $sql = "SELECT * FROM clients";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
@@ -70,8 +70,7 @@
                     <div class="mb-3">
                         <label for="PaymentStatus" class="form-label">Payment Status</label>
                         <select class="form-control" id="PaymentStatus" name="PaymentStatus" required>
-                            <option value="Pending"
-                                <?php echo ($invoice['PaymentStatus'] == 'Pending') ? 'selected' : ''; ?>>Pending
+                            <option value="Pending" <?php echo ($invoice['PaymentStatus'] == 'Pending') ? 'selected' : ''; ?>>Pending
                             </option>
                             <option value="Paid" <?php echo ($invoice['PaymentStatus'] == 'Paid') ? 'selected' : ''; ?>>
                                 Paid</option>
@@ -82,11 +81,9 @@
                     <div class="mb-3">
                         <label for="PaymentInformation" class="form-label">Payment Information</label>
                         <select class="form-control" id="PaymentInformation" name="PaymentInformation" required>
-                            <option value="Harshit Raheja"
-                                <?php echo ($invoice['PaymentInformation'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
+                            <option value="Harshit Raheja" <?php echo ($invoice['PaymentInformation'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
                                 Harshit Raheja</option>
-                            <option value="Ishwar Chawla"
-                                <?php echo ($invoice['PaymentInformation'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
+                            <option value="Ishwar Chawla" <?php echo ($invoice['PaymentInformation'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
                                 Ishwar Chawla</option>
                         </select>
                     </div>
@@ -95,11 +92,9 @@
                     <div class="mb-3">
                         <label for="InvoiceAuthor" class="form-label">Invoice Author</label>
                         <select class="form-control" id="InvoiceAuthor" name="InvoiceAuthor" required>
-                            <option value="Harshit Raheja"
-                                <?php echo ($invoice['InvoiceAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>Harshit
+                            <option value="Harshit Raheja" <?php echo ($invoice['InvoiceAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>Harshit
                                 Raheja</option>
-                            <option value="Ishwar Chawla"
-                                <?php echo ($invoice['InvoiceAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>Ishwar
+                            <option value="Ishwar Chawla" <?php echo ($invoice['InvoiceAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>Ishwar
                                 Chawla</option>
                         </select>
                     </div>

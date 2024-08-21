@@ -36,7 +36,7 @@
         // Fetch client data for editing
         if (isset($_GET['ClientID'])) {
             $clientID = intval($_GET['ClientID']);
-            $sql = "SELECT * FROM Clients WHERE ClientID=$clientID";
+            $sql = "SELECT * FROM clients WHERE ClientID=$clientID";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

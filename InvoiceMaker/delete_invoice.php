@@ -16,7 +16,7 @@
             $invoiceID = intval($_GET['invoiceID']);
 
             // Delete invoice from the database
-            $sql = "DELETE FROM Invoices WHERE InvoiceID = $invoiceID";
+            $sql = "DELETE FROM invoices WHERE InvoiceID = $invoiceID";
             $conn->query($sql);
             $result = $conn->query($sql);
 

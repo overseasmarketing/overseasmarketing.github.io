@@ -9,7 +9,7 @@ if (isset($_GET['ClientID'])) {
     include 'db-connect.php';
 
     // Prepare and execute the delete statement
-    $sql = "DELETE FROM Clients WHERE ClientID = ?";
+    $sql = "DELETE FROM clients WHERE ClientID = ?";
 
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("i", $clientID);

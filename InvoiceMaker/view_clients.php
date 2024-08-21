@@ -14,7 +14,7 @@
 
         <?php
         // Fetch all clients from the database
-        $sql = "SELECT * FROM Clients";
+        $sql = "SELECT * FROM clients";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
