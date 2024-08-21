@@ -70,7 +70,8 @@
                     <div class="mb-3">
                         <label for="PaymentStatus" class="form-label">Payment Status</label>
                         <select class="form-control" id="PaymentStatus" name="PaymentStatus" required>
-                            <option value="Pending" <?php echo ($invoice['PaymentStatus'] == 'Pending') ? 'selected' : ''; ?>>Pending
+                            <option value="Pending"
+                                <?php echo ($invoice['PaymentStatus'] == 'Pending') ? 'selected' : ''; ?>>Pending
                             </option>
                             <option value="Paid" <?php echo ($invoice['PaymentStatus'] == 'Paid') ? 'selected' : ''; ?>>
                                 Paid</option>
@@ -81,9 +82,11 @@
                     <div class="mb-3">
                         <label for="PaymentInformation" class="form-label">Payment Information</label>
                         <select class="form-control" id="PaymentInformation" name="PaymentInformation" required>
-                            <option value="Harshit Raheja" <?php echo ($invoice['PaymentInformation'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
+                            <option value="Harshit Raheja"
+                                <?php echo ($invoice['PaymentInformation'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
                                 Harshit Raheja</option>
-                            <option value="Ishwar Chawla" <?php echo ($invoice['PaymentInformation'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
+                            <option value="Ishwar Chawla"
+                                <?php echo ($invoice['PaymentInformation'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
                                 Ishwar Chawla</option>
                         </select>
                     </div>
@@ -92,9 +95,11 @@
                     <div class="mb-3">
                         <label for="InvoiceAuthor" class="form-label">Invoice Author</label>
                         <select class="form-control" id="InvoiceAuthor" name="InvoiceAuthor" required>
-                            <option value="Harshit Raheja" <?php echo ($invoice['InvoiceAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>Harshit
+                            <option value="Harshit Raheja"
+                                <?php echo ($invoice['InvoiceAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>Harshit
                                 Raheja</option>
-                            <option value="Ishwar Chawla" <?php echo ($invoice['InvoiceAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>Ishwar
+                            <option value="Ishwar Chawla"
+                                <?php echo ($invoice['InvoiceAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>Ishwar
                                 Chawla</option>
                         </select>
                     </div>
@@ -301,7 +306,7 @@
         $product6_total = intval($product6_quantity) * intval($product6_rate) ?? '';
 
         // Update data in the database
-        $sql = "UPDATE Invoices SET InvoiceDate='$invoiceDate', ClientID='$clientID', Product1_Description='$product1_description', Product1_Quantity='$product1_quantity', Product1_Rate='$product1_rate', Product1_Total='$product1_total',
+        $sql = "UPDATE invoices SET InvoiceDate='$invoiceDate', ClientID='$clientID', Product1_Description='$product1_description', Product1_Quantity='$product1_quantity', Product1_Rate='$product1_rate', Product1_Total='$product1_total',
             Product2_Description='$product2_description', Product2_Quantity='$product2_quantity', Product2_Rate='$product2_rate', Product2_Total='$product2_total',
             Product3_Description='$product3_description', Product3_Quantity='$product3_quantity', Product3_Rate='$product3_rate', Product3_Total='$product3_total',
             Product4_Description='$product4_description', Product4_Quantity='$product4_quantity', Product4_Rate='$product4_rate', Product4_Total='$product4_total',
