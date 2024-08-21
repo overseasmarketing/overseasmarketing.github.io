@@ -90,14 +90,14 @@
 </body>
 
 <script>
-function openLink(link) {
-    let result = confirm("Are you sure you want to delete this invoice?");
-    if (!result) {
-        return;
-    } else {
-        window.location.href = link;
+    function openLink(link) {
+        let result = confirm("Are you sure you want perform this action?");
+        if (!result) {
+            return;
+        } else {
+            window.location.href = link;
+        }
     }
-}
 </script>
 
 </html>
