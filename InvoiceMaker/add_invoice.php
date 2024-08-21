@@ -269,7 +269,7 @@
 
 
         // Insert data into the database
-        $sql = "INSERT INTO Invoices (InvoiceDate, ClientID, Product1_Description, Product1_Quantity, Product1_Rate, Product1_Total,
+        $sql = "INSERT INTO invoices (InvoiceDate, ClientID, Product1_Description, Product1_Quantity, Product1_Rate, Product1_Total,
             Product2_Description, Product2_Quantity, Product2_Rate, Product2_Total,
             Product3_Description, Product3_Quantity, Product3_Rate, Product3_Total,
             Product4_Description, Product4_Quantity, Product4_Rate, Product4_Total,
