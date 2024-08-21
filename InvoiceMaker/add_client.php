@@ -48,7 +48,7 @@
         include 'db-connect.php';
 
         // Check if client already exists
-        $sql = "SELECT * FROM Clients WHERE Name='$name' AND Phone='$phone' AND Email='$email';";
+        $sql = "SELECT * FROM clients WHERE Name='$name' AND Phone='$phone' AND Email='$email';";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -56,7 +56,7 @@
             exit();
         }
 
-        $sql = "INSERT INTO Clients (Name, Phone, Email, Address) VALUES ('$name', '$phone', '$email', '$address')";
+        $sql = "INSERT INTO clients (Name, Phone, Email, Address) VALUES ('$name', '$phone', '$email', '$address')";
 
         if ($conn->query($sql) === TRUE) {
             header("Location: index.php");
