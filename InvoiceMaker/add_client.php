@@ -39,10 +39,10 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Input validation using regex
-        $name = $_POST['name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $address = $_POST['address'];
+        $name = htmlspecialchars($_POST['name']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $email = htmlspecialchars($_POST['email']);
+        $address = htmlspecialchars($_POST['address']);
 
         // Database connection
         include 'db-connect.php';
