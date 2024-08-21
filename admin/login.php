@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $USERNAME = $_POST["username"];
     $PASSWORD = $_POST["password"];
-    $DATE = $_POST["last_login_date"];
+    $DATE = $_POST["date"];
 
     // Fetch USERNAME & PASSWORDS from a 'admin_users'
     $sql = "SELECT * FROM admin_users WHERE username = '$USERNAME' AND password = '$PASSWORD'";

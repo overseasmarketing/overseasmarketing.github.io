@@ -22,7 +22,7 @@
             $address = $_POST['address'];
 
             // Update client information
-            $sql = "UPDATE Clients SET Name='$name', Phone='$phone', Email='$email', Address='$address' WHERE ClientID=$clientID";
+            $sql = "UPDATE clients SET Name='$name', Phone='$phone', Email='$email', Address='$address' WHERE ClientID=$clientID";
 
             if ($conn->query($sql) === TRUE) {
                 echo "<div class='alert alert-success mt-4'>Client updated successfully.</div>";
