@@ -11,30 +11,30 @@
     <!-- Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+        }
 
-    .text-start {
-        text-align: left;
-    }
+        .text-start {
+            text-align: left;
+        }
 
-    .text-end {
-        text-align: right;
-    }
+        .text-end {
+            text-align: right;
+        }
 
-    .text-center {
-        text-align: center;
-    }
+        .text-center {
+            text-align: center;
+        }
 
-    .opacity-75 {
-        opacity: 0.75;
-    }
+        .opacity-75 {
+            opacity: 0.75;
+        }
 
-    .invoice-table th,
-    .invoice-table td {
-        text-align: center;
-    }
+        .invoice-table th,
+        .invoice-table td {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -103,22 +103,27 @@
 
     // Author
     $InvoiceAuthor = $row["InvoiceAuthor"];
+    $paymentInformation = $row["PaymentInformation"];
 
-    if ($InvoiceAuthor == "Harshit Raheja") {
-        $authorizedSignature = "Harshit Raheja";
-        $authorizedSignatureImage = "signature_harshit.png";
+    if ($paymentInformation == "Harshit Raheja") {
         $BankingName = "Harshit Raheja";
         $BankingAccount = "3358000101153756";
         $BankingIFSC = "PUNB0335800";
         $BankingUPI = "harshitrahejapersonal@okhdfcbank";
-
-    } else if ($InvoiceAuthor == "Ishwar Chawla") {
-        $authorizedSignature = "Ishwar Chawla";
+    } else if ($paymentInformation == "Ishwar Chawla") {
         $authorizedSignatureImage = "signature_ishwar.png";
         $BankingName = "Ishwar Chawla";
         $BankingAccount = "018310110005066";
         $BankingIFSC = "BKID0000183";
         $BankingUPI = "ishwarchawla2004@okaxis";
+    }
+
+    if ($InvoiceAuthor == "Harshit Raheja") {
+        $authorizedSignature = "Harshit Raheja";
+        $authorizedSignatureImage = "signature_harshit.png";
+
+    } else if ($InvoiceAuthor == "Ishwar Chawla") {
+        $authorizedSignature = "Ishwar Chawla";
     }
 
     $sql_clients = "SELECT * FROM clients WHERE ClientID = $clientID";
