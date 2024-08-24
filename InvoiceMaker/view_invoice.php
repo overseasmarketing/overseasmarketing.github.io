@@ -11,30 +11,30 @@
     <!-- Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+        }
 
-    .text-start {
-        text-align: left;
-    }
+        .text-start {
+            text-align: left;
+        }
 
-    .text-end {
-        text-align: right;
-    }
+        .text-end {
+            text-align: right;
+        }
 
-    .text-center {
-        text-align: center;
-    }
+        .text-center {
+            text-align: center;
+        }
 
-    .opacity-75 {
-        opacity: 0.75;
-    }
+        .opacity-75 {
+            opacity: 0.75;
+        }
 
-    .invoice-table th,
-    .invoice-table td {
-        text-align: center;
-    }
+        .invoice-table th,
+        .invoice-table td {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -64,7 +64,9 @@
     $invoiceNumber = $row["InvoiceID"];
     $clientID = $row["ClientID"];
     $invoiceIssueDate = $row["InvoiceDate"];
+    $invoiceIssueDate = date("d-m-Y", strtotime($invoiceIssueDate));
     $invoiceDueDate = $row["PaymentDueDate"];
+    $invoiceDueDate = date("d-m-Y", strtotime($invoiceDueDate));
 
     // Products information
     $product1_Description = $row["Product1_Description"];
