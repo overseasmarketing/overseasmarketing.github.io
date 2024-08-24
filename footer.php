@@ -40,6 +40,9 @@
                         <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('work')">
                             Work
                         </button>
+                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('T&C.pdf')">
+                            Terms & Conditions
+                        </button>
                     </center>
                 </div>
             </div>
@@ -52,7 +55,7 @@
 </footer>
 
 <script>
-AOS.init({
-    duration: 800, // values from 0 to 3000, with step 50ms
-});
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
 </script>

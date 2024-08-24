@@ -38,6 +38,9 @@
                         <li class="nav-item">
                             <a class="nav-link cursor-pointer" onclick="openLink('work')">Work</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link cursor-pointer" onclick="openLink('T&C.pdf')">Terms & Conditions</a>
+                        </li>
                     </ul>
                 </div>
             </div>
