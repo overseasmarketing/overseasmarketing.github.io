@@ -11,30 +11,30 @@
     <!-- Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+    }
 
-        .text-start {
-            text-align: left;
-        }
+    .text-start {
+        text-align: left;
+    }
 
-        .text-end {
-            text-align: right;
-        }
+    .text-end {
+        text-align: right;
+    }
 
-        .text-center {
-            text-align: center;
-        }
+    .text-center {
+        text-align: center;
+    }
 
-        .opacity-75 {
-            opacity: 0.75;
-        }
+    .opacity-75 {
+        opacity: 0.75;
+    }
 
-        .invoice-table th,
-        .invoice-table td {
-            text-align: center;
-        }
+    .invoice-table th,
+    .invoice-table td {
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -234,14 +234,15 @@
 
     <div class='row pt-2'>
         <div class='col-12 text-start opacity-75'>
-            Terms & Conditions Applied*
-            <br>
             <div class='pt-2'>
                 <strong>Authorized Signature</strong>
                 <div class='col-12 text-start'>
                     <img class='img-fluid' width='100px' src='${authorizedSignatureImage}' alt='${authorizedSignature}'>
                     <p>${authorizedSignature}</p>
                 </div>
+                <center>
+                    Terms & Conditions Applied*
+                </center>
             </div>
         </div>
     </div>
