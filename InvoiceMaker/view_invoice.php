@@ -165,6 +165,8 @@
             <strong>Invoice Number #</strong>$invoiceNumber
             <br>
             <strong>Invoice Date </strong>$invoiceIssueDate
+            <br>
+            <strong>Due Date </strong>$invoiceDueDate
         </div>
     </div>
     <table class='table mt-5'>
@@ -217,9 +219,6 @@
 
     <div class='row pt-2'>
         <div class='col-12 text-start'>
-            <strong>Payment Due Date</strong><br>
-            <span class='text-danger'><strong>$invoiceDueDate</strong></span>
-            <br>
             <strong>Payment Information</strong><br>
             <span>
                 <strong>Bank Name:</strong> $BankingName
