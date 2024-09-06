@@ -17,7 +17,7 @@
         $Quotation = null;
 
         if ($QuotationID > 0) {
-            $sql = "SELECT * FROM Quotations WHERE QuotationID = $QuotationID";
+            $sql = "SELECT * FROM quotations WHERE QuotationID = $QuotationID";
             $result = $conn->query($sql);
             if ($result->num_rows == 1) {
                 $Quotation = $result->fetch_assoc();
