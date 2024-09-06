@@ -26,14 +26,16 @@
 
         <div class="container p-5">
             <h2>Our Clients</h2>
-            <?php
-            $directory = 'img/clients';
-            $images = glob($directory . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+            <center>
+                <?php
+                $directory = 'img/clients';
+                $images = glob($directory . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 
-            foreach ($images as $image) {
-                echo '<img class="img-fluid m-1 rounded-circle client-logo cursor-pointer" src="' . $image . '" alt="">';
-            }
-            ?>
+                foreach ($images as $image) {
+                    echo '<img class="img-fluid m-1 rounded-circle client-logo cursor-pointer" src="' . $image . '" alt="">';
+                }
+                ?>
+            </center>
         </div>
 
     </main>
