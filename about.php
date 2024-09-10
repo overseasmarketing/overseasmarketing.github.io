@@ -23,9 +23,14 @@
                 <div class="row">
                     <div class="col-md-12 mb-4">
                         <h2 class="display-6">Overseas Marketing</h2>
-                        <p>Founders & CEOs: <a class="text-link"
+                        <p>
+                            Founders & CEOs: <a class="text-link"
                                 href="https://www.linkedin.com/in/harshitraheja/">Harshit Raheja</a> and <a
                                 class="text-link" href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a>
+                            <br>
+                            Sales Associate & Marketing Manager: <a class="text-link"
+                                href="https://www.instagram.com/raheja_neev/">Neev Raheja</a>
+
                         </p>
                         <p>Role: Overseas Marketing serves as the parent company, strategically guiding
                             and managing its subsidiary divisions. With a focus on delivering integrated marketing
