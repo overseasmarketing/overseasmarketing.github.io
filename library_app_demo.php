@@ -10,69 +10,69 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <style>
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #333;
-        border-bottom: 1px solid #444;
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            border-bottom: 1px solid #444;
+        }
 
-    .scrolling-wrapper {
-        overflow-x: auto;
-        white-space: nowrap;
-        scrollbar-width: none;
+        .scrolling-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
 
-    }
+        }
 
-    .scrolling-wrapper::-webkit-scrollbar {
-        display: none;
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
 
-    }
+        }
 
-    .search-container {
-        position: relative;
-        margin-top: 20px;
-    }
+        .search-container {
+            position: relative;
+            margin-top: 20px;
+        }
 
-    .bg-search {
-        background-color: #1a1a1a;
-    }
+        .bg-search {
+            background-color: #1a1a1a;
+        }
 
-    .search-bar {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: rgb(10, 10, 10);
-        border: none;
-        border-radius: 20px;
-        padding: 10px 20px 10px 40px;
-        width: 100%;
-        outline: none;
-        box-shadow: none;
-    }
+        .search-bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgb(10, 10, 10);
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px 10px 40px;
+            width: 100%;
+            outline: none;
+            box-shadow: none;
+        }
 
-    .search-bar::placeholder {
-        color: rgba(217, 217, 217, 0.5);
-    }
+        .search-bar::placeholder {
+            color: rgba(217, 217, 217, 0.5);
+        }
 
-    .search-icon {
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
-        color: rgba(255, 255, 255, 0.5);
-    }
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+        }
 
-    .search-input {
-        color: white;
-        background-color: #1a1a1a !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
+        .search-input {
+            color: white;
+            background-color: #1a1a1a !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
 
-    .search-input::placeholder {
-        color: rgba(217, 217, 217, 0.5);
-    }
+        .search-input::placeholder {
+            color: rgba(217, 217, 217, 0.5);
+        }
     </style>
 </head>
 
