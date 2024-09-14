@@ -28,7 +28,7 @@
         }
         ?>
 
-        <form action="edit_Quotation.php" method="post" class="mt-4">
+        <form action="edit_quotation.php" method="post" class="mt-4">
             <input type="hidden" name="QuotationID" value="<?php echo $QuotationID; ?>">
 
             <div class="row">
@@ -63,10 +63,12 @@
                     <div class="mb-3">
                         <label for="ApprovalStatus" class="form-label">Approval Status</label>
                         <select class="form-control" id="ApprovalStatus" name="ApprovalStatus" required>
-                            <option value="Pending" <?php echo ($Quotation['ApprovalStatus'] == 'Pending') ? 'selected' : ''; ?>>
+                            <option value="Pending"
+                                <?php echo ($Quotation['ApprovalStatus'] == 'Pending') ? 'selected' : ''; ?>>
                                 Pending
                             </option>
-                            <option value="Approved" <?php echo ($Quotation['ApprovalStatus'] == 'Approved') ? 'selected' : ''; ?>>
+                            <option value="Approved"
+                                <?php echo ($Quotation['ApprovalStatus'] == 'Approved') ? 'selected' : ''; ?>>
                                 Approved
                             </option>
                         </select>
@@ -76,10 +78,12 @@
                     <div class="mb-3">
                         <label for="QuotationAuthor" class="form-label">Quotation Author</label>
                         <select class="form-control" id="QuotationAuthor" name="QuotationAuthor" required>
-                            <option value="Harshit Raheja" <?php echo ($Quotation['QuotationAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
+                            <option value="Harshit Raheja"
+                                <?php echo ($Quotation['QuotationAuthor'] == 'Harshit Raheja') ? 'selected' : ''; ?>>
                                 Harshit
                                 Raheja</option>
-                            <option value="Ishwar Chawla" <?php echo ($Quotation['QuotationAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
+                            <option value="Ishwar Chawla"
+                                <?php echo ($Quotation['QuotationAuthor'] == 'Ishwar Chawla') ? 'selected' : ''; ?>>
                                 Ishwar
                                 Chawla</option>
                         </select>
