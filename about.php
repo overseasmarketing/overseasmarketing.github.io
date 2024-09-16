@@ -30,7 +30,9 @@
                             <br>
                             Sales Associate & Marketing Manager: <a class="text-link"
                                 href="https://www.instagram.com/raheja_neev/">Neev Raheja</a>
-
+                            <br>
+                            Senior Graphic Designer: <a class="text-link"
+                                href="https://www.linkedin.com/in/tanushree-sawale-42068a269">Tanushree Sawale</a>
                         </p>
                         <p>Role: Overseas Marketing serves as the parent company, strategically guiding
                             and managing its subsidiary divisions. With a focus on delivering integrated marketing
