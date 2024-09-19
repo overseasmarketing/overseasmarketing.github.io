@@ -1,17 +1,24 @@
 <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
-        content='Overseas Marketing is a dynamic and innovative marketing firm that specializes in helping businesses expand their reach and tap into new markets overseas. Whether you are looking to expand into new regions or simply want to increase your global brand awareness, we have the expertise and resources to help you achieve your goals.'>
-    <meta content='Overseas Marketing Company, Overseas Marketing Agency' name='keywords'>
+        content="Overseas Marketing is a dynamic and innovative marketing firm that specializes in helping businesses expand their reach and tap into new markets overseas. Whether you are looking to expand into new regions or simply want to increase your global brand awareness, we have the expertise and resources to help you achieve your goals.">
+    <meta content="Overseas Marketing Company, Overseas Marketing Agency" name="keywords">
     <meta name="author" content="Overseas Marketing">
 
     <!-- Title -->
     <title>Overseas Marketing</title>
 
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Overseas Marketing">
+    <meta property="og:description"
+        content="Overseas Marketing is a dynamic and innovative marketing firm that specializes in helping businesses expand their reach and tap into new markets overseas.">
+    <meta property="og:image" content="https://overseasmarketing.co.in/img/tube.png">
+    <meta property="og:url" content="https://overseasmarketing.co.in/img/ogimage.png">
+
     <!-- Favicons -->
-    <link rel='icon' href='https://overseasmarketing.co.in/img/tube.png'>
+    <link rel="icon" href="https://overseasmarketing.co.in/img/tube.png">
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://overseasmarketing.co.in/easmarketing.studio/img/tube.png">
 
@@ -43,11 +50,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K65WHLZ80K">
     </script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-K65WHLZ80K');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-K65WHLZ80K");
     </script>
 
 </head>
