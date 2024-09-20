@@ -1,248 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="QuantumByteStudios">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- GoogleFonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @font-face {
+            font-family: 'Futura';
+            src: url('fonts/futura.woff2') format('woff2'),
+                url('fonts/futura.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    <title>Portfolio - Tanushree Sawale</title>
+        body {
+            font-family: 'Futura', sans-serif;
+        }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        .title-name {
+            font-size: 150px;
+            line-height: 80%;
+            font-weight: 1000;
+            filter: invert(1);
+            opacity: 0.5;
+        }
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-        rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+        .title-tagline {
+            font-weight: 1000;
+            color: white;
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+        @media all and (max-width: 1000px) {
+            .title-name {
+                font-size: 50px;
+            }
+        }
 
+        .bg-sand {
+            background-image: url("img/sand.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .bg-sand-light {
+            background-color: black;
+            background-image: url("img/sand.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
-<body id="page-top">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Portfolio</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a align="left" class="nav-link js-scroll-trigger" href="assets/portfolio_compressed.pdf">Resume</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-            <div class="my-auto">
-                <h1 class="mb-0">Tanushree
-                    <span class="text-primary">Sawale</span>
-                </h1>
-                <p>
-                    Phone: <a class="text-dark" href="tel:8855883519">+91 88558 83519</a>
+    <!-- Section 1 -->
+    <div style="height: 100vh;" class="container-fluid p-0 bg-sand d-flex justify-content-center align-items-center">
+        <div class="animate__animated animate__fadeIn">
+            <center>
+                <span class="fs-1 text-white">
+                    GRAPHIC DESIGNER
+                </span>
+                <br>
+                <span class="title-name">
+                    TANUSHREE
                     <br>
-                    Email: <a class="text-dark" href="mailto:sawaletanushree@gmail.com">sawaletanushree@gmail.com</a>
-                </p>
-                <p class="mb-5">
-                    Hello, I am Tanushree Sawale. Here, you find
-                    three-plus years of professional experience
-                    as a graphic designer. My specialty is taking
-                    any theme and making it spectacular. The
-                    thought box is what feeds me, so to speak. I
-                    love to think out of the box and push every
-                    possible limit. If you are looking for some-
-                    thing unique and innovative, then this is
-                    your chance. Let my designs speak for
-                    themselves. Hopefully, they inspire you like
-                    they have inspired me.
-                </p>
-                <ul class="list-inline list-social-icons mb-0">
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/tanushree-sawale-42068a269/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/tanushreee.26/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-            <div class="my-auto">
-                <h2 class="mb-5">Experience</h2>
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Senior Graphic Designer</h3>
-                        <div class="subheading mb-3">Overseas Marketing</div>
-                        <p>
-                            Overseas Marketing is a company that specializes in marketing and advertising for overseas
-                            clients. I
-                            have been with the company for over an year and have worked on a variety of projects. My
-                            main
-                            responsibilities include creating graphics for clients, designing logos, and creating
-                            marketing materials
-                            for clients.
-                        </p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">August 2023 - Present</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-            <div class="my-auto">
-                <h2 class="mb-5">Education</h2>
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Ramnarain Ruia</h3>
-                        <div class="subheading mb-3">Bachelor of Arts (Economics & Commerce)</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">August 2020 - Present</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Holy Family Convent High School</h3>
-                        <div class="subheading mb-3">Grade 10th</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">May 2020</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-            <div class="my-auto">
-                <h2 class="mb-2">Skills</h2>
-                <div class="subheading mb-3">Softwares & Tools</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-circle"></i>
-                        Adobe Photoshop
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-circle"></i>
-                        Adobe Illustrator
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-circle"></i>
-                        Adobe After Effects
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-circle"></i>
-                        Coral Draw
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-            <div class="my-auto">
-                <h2 class="mb-2">Interests</h2>
-                <p>
-                    A passion for arts and crafts drives me to keep looking for creative interests and outlets, such as
-                    designing.
-                    Beyond my
-                    artistic work, I'm also active in dance-a form of expression I especially love-and periodically
-                    sing. I have a
-                    great
-                    appreciation for savoring a cup of coffee while enjoying a scenic view, as it fuels my creativity
-                    and enhances
-                    my
-                    appreciation for the moment. I also thrive in social settings, as I truly enjoy connecting with
-                    others and
-                    building
-                    meaningful relationships.
-                </p>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="work">
-            <div class="my-auto">
-                <h2 class="mb-2">Work</h2>
-                <div class="row">
-                    <?php
-					// Display all the images in img/work using for loop
-					$dir = 'img/work';
-					$files = scandir($dir);
-					foreach ($files as $file) {
-						if ($file != '.' && $file != '..') {
-							echo '<div class="col-4 mt-2"><img src="' . $dir . '/' . $file . '" class="img-fluid"></div>';
-						}
-					}
-					?>
-                </div>
-            </div>
-        </section>
-
+                    SAWALE
+                </span>
+            </center>
+        </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+    <!-- Section 2 -->
+    <div style="height: 100vh;"
+        class="container-fluid p-0 bg-sand-light opacity-50 d-flex justify-content-center align-items-center">
+        <div class="animate__animated animate__fadeIn">
+            <center>
+                <span class="fs-1 title-tagline">
+                    TURNING CONCEPTS INTO REALITY
+                </span>
+            </center>
+        </div>
+    </div>
 
 </body>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
 
 </html>
