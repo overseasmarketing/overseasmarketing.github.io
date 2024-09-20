@@ -183,8 +183,8 @@
             <td>$count</td>
             <td>$product[Description]</td>
             <td>$product[Quantity]</td>
-            <td>$product[Rate]</td>
-            <td>$product[Total]</td>
+            <td>₹ $product[Rate]</td>
+            <td>₹ $product[Total]</td>
         </tr>
         ";
     }
