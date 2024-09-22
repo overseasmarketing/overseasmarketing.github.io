@@ -34,54 +34,20 @@
                             Senior Graphic Designer: <a class="text-link"
                                 href="https://www.linkedin.com/in/tanushree-sawale-42068a269">Tanushree Sawale</a>
                         </p>
-                        <p>Role: Overseas Marketing serves as the parent company, strategically guiding
-                            and managing its subsidiary divisions. With a focus on delivering integrated marketing
-                            solutions, Overseas Marketing leverages the specialized expertise of its subsidiaries to
-                            provide comprehensive services that encompass both technical and media requirements.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <h3 class="display-6">Quantum Byte Studios</h3>
-                        <p>CEO: <a class="text-link" href="https://www.linkedin.com/in/harshitraheja/">Harshit
-                                Raheja</a></p>
-                        <p>Specialization: Quantum Byte Studios is dedicated to fulfilling all
-                            technical requirements, including web development, software engineering, and
-                            technology-driven solutions. As a key division under Overseas Marketing, Quantum Byte
-                            Studios ensures that clients receive cutting-edge technical services tailored to their
-                            specific needs.</p>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <h3 class="display-6">NSC-Media</h3>
-                        <p>CEO: <a class="text-link" href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a>
-                        </p>
-                        <p>Specialization: NSC-Media focuses on media production, branding, content
-                            creation, and communication strategies. As an integral part of Overseas Marketing, NSC-Media
-                            delivers innovative media solutions that align with our clients' goals and objectives.</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12 mb-4">
                         <h2 class="display-6">Leadership Roles and Company Relationships</h2>
-                        <p><a class="text-link" href="https://www.linkedin.com/in/harshitraheja/">Harshit Raheja</a> and
-                            <a class="text-link" href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a>: As
-                            the co-founders and CEOs of Overseas
-                            Marketing, <a class="text-link" href="https://www.linkedin.com/in/harshitraheja/">Harshit
-                                Raheja</a> and <a class="text-link"
-                                href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a> are responsible for
-                            the strategic direction and
-                            overall management of the company. They bring a wealth of expertise from their respective
-                            fields, ensuring that Overseas Marketing remains at the forefront of the industry. <a
-                                class="text-link" href="https://www.linkedin.com/in/harshitraheja/">Harshit
-                                Raheja</a>, as the CEO of Quantum Byte Studios, leads the technical division, ensuring
-                            that all
-                            technological aspects meet the highest standards of excellence. <a class="text-link"
-                                href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a>, as the CEO of
-                            NSC-Media, oversees the media division, driving creative strategies and media execution to
-                            achieve optimal results for our clients.
+                        <p>
+                            Harshit Raheja and Ishwar Chawla, the founders and CEOs of Overseas Marketing, steer the
+                            company’s strategic direction and overall management. With extensive expertise in their
+                            respective domains, they ensure that Overseas Marketing remains a leader in the industry.
+                            Harshit Raheja heads the technical division, ensuring top-tier standards in all
+                            technological operations, while Ishwar Chawla leads the media division, focusing on
+                            innovative strategies and effective media execution to deliver exceptional outcomes for
+                            clients.
                         </p>
                     </div>
                 </div>
@@ -89,32 +55,13 @@
                 <div class="row">
                     <div class="col-md-12 mb-4">
                         <h2 class="display-6">Conclusion</h2>
-                        <p>Overseas Marketing is more than just a parent company; it is a hub of innovation and
-                            creativity, where technology and media converge to deliver unparalleled marketing solutions.
-                            Under the leadership of <a class="text-link"
-                                href="https://www.linkedin.com/in/harshitraheja/">Harshit Raheja</a> and <a
-                                class="text-link" href="https://www.linkedin.com/in/ishwarchawla/">Ishwar Chawla</a>,
-                            Overseas Marketing and its
-                            subsidiaries, Quantum Byte Studios and NSC-Media, continue to set new standards of
-                            excellence in the industry.</p>
+                        <p>
+                            Overseas Marketing is not just a company; it's a center of innovation and creativity, where
+                            technology and media come together to provide unmatched marketing solutions. Guided by the
+                            leadership of Harshit Raheja and Ishwar Chawla, Overseas Marketing consistently raises the
+                            bar for excellence in the industry.
+                        </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://quantumbytestudios.in">
-                        <center>
-                            <img class="img-fluid partners-logo" src="img/qb.png" alt="Quantum Byte Studios">
-                        </center>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://nsc-media.in/">
-                        <center>
-                            <img class="img-fluid partners-logo" src="img/nsc.png" alt="Quantum Byte Studios">
-                        </center>
-                    </a>
                 </div>
             </div>
 
