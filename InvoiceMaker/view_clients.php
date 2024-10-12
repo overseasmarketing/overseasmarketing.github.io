@@ -9,7 +9,7 @@
 <?php include 'db-connect.php'; ?>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h2 class="mt-5">Client List</h2>
 
         <?php
