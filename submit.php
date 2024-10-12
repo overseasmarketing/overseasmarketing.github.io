@@ -27,7 +27,7 @@ $result_db = mysqli_query($conn, $sql);
 
 // Email setup
 $to = "theoverseasmarketing@gmail.com";
-$subject = "New Contact Form Submission - Overseas Marketing - $name";
+$subject = "New Contact Form Submission - $name";
 
 // Construct the HTML email message
 $emailMessage = "
