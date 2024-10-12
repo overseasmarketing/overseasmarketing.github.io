@@ -38,8 +38,8 @@
                 echo '<td>' . htmlspecialchars($row['Email']) . '</td>';
                 echo '<td>' . htmlspecialchars($row['Address']) . '</td>';
                 echo '<td>
-                        <a href="edit_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="delete_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Are you sure you want to delete this client?\');">Delete</a>
+                        <a href="edit_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-warning btn-sm"><i class="fa fa-solid fa-pen"></i></a>
+                        <a href="delete_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Are you sure you want to delete this client?\');"><i class="fa fa-solid fa-trash"></i></a>
                       </td>';
                 echo '</tr>';
             }

@@ -81,7 +81,7 @@
                         echo "<td>$paymentStatus</td>";
                         echo "<td>";
                         echo "<button onclick='openLink(\"view_invoice?invoiceID=" . $row["InvoiceID"] . "\")' class='btn btn-success btn-sm m-2 text-start'><i class='fa fa-solid fa-eye'></i></button>";
-                        echo "<button onclick='openLink(\"edit_invoice?invoiceID=" . $row["InvoiceID"] . "\")' class='btn btn-primary btn-sm m-2 text-start'><i class='fa fa-solid fa-edit'></i></button>";
+                        echo "<button onclick='openLink(\"edit_invoice?invoiceID=" . $row["InvoiceID"] . "\")' class='btn btn-primary btn-sm m-2 text-start'><i class='fa fa-solid fa-pen'></i></button>";
                         echo "<button onclick='openLink(\"delete_invoice?invoiceID=" . $row["InvoiceID"] . "\")' class='btn btn-danger btn-sm m-2 text-start'><i class='fa fa-solid fa-trash'></i></button>";
                         echo "</td>";
                         echo "</tr>";
@@ -136,7 +136,7 @@
                         echo "<td>$ApprovalStatus</td>";
                         echo "<td>";
                         echo "<button onclick='openLink(\"view_quotation?QuotationID=" . $row["QuotationID"] . "\")' class='btn btn-success btn-sm m-2 text-start'><i class='fa fa-solid fa-eye'></i></button>";
-                        echo "<button onclick='openLink(\"edit_quotation?QuotationID=" . $row["QuotationID"] . "\")' class='btn btn-primary btn-sm m-2 text-start'><i class='fa fa-solid fa-edit'></i></button>";
+                        echo "<button onclick='openLink(\"edit_quotation?QuotationID=" . $row["QuotationID"] . "\")' class='btn btn-primary btn-sm m-2 text-start'><i class='fa fa-solid fa-pen'></i></button>";
                         echo "<button onclick='openLink(\"delete_quotation?QuotationID=" . $row["QuotationID"] . "\")' class='btn btn-danger btn-sm m-2 text-start'><i class='fa fa-solid fa-trash'></i></button>";
                         echo "</td>";
                         echo "</tr>";
