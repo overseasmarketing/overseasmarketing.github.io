@@ -34,8 +34,8 @@
                 echo '<tr>';
                 echo '<td>' . htmlspecialchars($row['ClientID']) . '</td>';
                 echo '<td>' . htmlspecialchars($row['Name']) . '</td>';
-                echo '<td>' . htmlspecialchars($row['Phone']) . '</td>';
-                echo '<td>' . htmlspecialchars($row['Email']) . '</td>';
+                echo '<td><a class="text-decoration-none" href="tel:' . htmlspecialchars($row['Phone']) . '">' . htmlspecialchars($row['Phone']) . '</a></td>';
+                echo '<td><a class="text-decoration-none" href="mailto:' . htmlspecialchars($row['Email']) . '">' . htmlspecialchars($row['Email']) . '</a></td>';
                 echo '<td>' . htmlspecialchars($row['Address']) . '</td>';
                 echo '<td>
                         <a href="edit_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-warning btn-sm"><i class="fa fa-solid fa-pen"></i></a>
