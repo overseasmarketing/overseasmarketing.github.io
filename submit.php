@@ -59,7 +59,7 @@ $emailMessage = "
 </html>";
 
 // Set headers for HTML email
-$headers = "From: no-reply@overseasmarketing.co.in\r\n";
+$headers = "From: Overseas Marketing <no-reply@overseasmarketing.co.in>\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
