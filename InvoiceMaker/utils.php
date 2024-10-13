@@ -1,6 +1,7 @@
 <?php
 function convertNumberToWords($number)
 {
+    // Word mappings for numbers
     $words = [
         0 => 'Zero',
         1 => 'One',
@@ -32,43 +33,71 @@ function convertNumberToWords($number)
         90 => 'Ninety'
     ];
 
+    // Units for large numbers
     $units = ['', 'Thousand', 'Million', 'Billion', 'Trillion'];
 
-    if ($number == 0)
-        return $words[0];
+    // Handle zero
+    if ($number == 0) {
+        return $words[0] . ' Rupees';
+    }
 
-    if ($number < 0)
+    // Handle negative numbers
+    if ($number < 0) {
         return 'Negative ' . convertNumberToWords(abs($number));
+    }
 
-    $number_parts = explode('.', $number);
-    $integer_part = strrev($number_parts[0]);
+    // Split number into integer and fractional parts
+    $number_parts = explode('.', number_format($number, 2, '.', '')); // Ensure 2 decimal points
+    $integer_part = strrev($number_parts[0]); // Reverse for chunking
     $fractional_part = isset($number_parts[1]) ? $number_parts[1] : '';
 
+    // Convert integer part
     $integer_words = [];
     foreach (str_split($integer_part, 3) as $index => $chunk) {
-        $chunk = strrev($chunk);
+        $chunk = strrev($chunk); // Reverse back the chunk
         $chunk_number = intval($chunk);
 
         if ($chunk_number) {
             $chunk_words = [];
-            if ($chunk_number < 20) {
-                $chunk_words[] = $words[$chunk_number];
-            } else {
-                $chunk_words[] = $words[$chunk_number - $chunk_number % 10];
-                if ($chunk_number % 10) {
-                    $chunk_words[] = $words[$chunk_number % 10];
+
+            // Handle hundreds
+            if ($chunk_number >= 100) {
+                $hundreds = intval($chunk_number / 100);
+                $chunk_words[] = $words[$hundreds] . ' Hundred';
+                $chunk_number %= 100; // Remove hundreds place for next calculations
+            }
+
+            // Handle tens and ones
+            if ($chunk_number > 0) {
+                if ($chunk_number < 20) {
+                    $chunk_words[] = $words[$chunk_number];
+                } else {
+                    $tens = intval($chunk_number / 10) * 10;
+                    $ones = $chunk_number % 10;
+                    $chunk_words[] = $words[$tens];
+                    if ($ones) {
+                        $chunk_words[] = $words[$ones];
+                    }
                 }
             }
-            if ($chunk_number >= 100) {
-                array_unshift($chunk_words, $words[intval($chunk[0])] . ' Hundred');
-            }
+
+            // Append the unit (Thousand, Million, etc.)
             $integer_words[] = implode(' ', $chunk_words) . ' ' . $units[$index];
         }
     }
 
+    // Reverse the integer words array to correct the order
     $integer_words = array_reverse($integer_words);
-    $fractional_words = $fractional_part ? 'and ' . (isset($words[$fractional_part]) ? $words[$fractional_part] : $words[$fractional_part[0] * 10] . ' ' . $words[$fractional_part[1]]) . ' Cents' : '';
 
-    return implode(' ', $integer_words) . ' Rupees ' . $fractional_words;
+    // Convert fractional part
+    $fractional_words = '';
+    if ($fractional_part && intval($fractional_part) > 0) {
+        $fractional_words = ' and ' . (isset($words[intval($fractional_part)])
+            ? $words[intval($fractional_part)]
+            : $words[intval($fractional_part[0]) * 10] . ' ' . $words[intval($fractional_part[1])]) . ' Cents';
+    }
+
+    // Combine integer and fractional words
+    return implode(' ', $integer_words) . ' Rupees' . $fractional_words;
 }
 ?>

@@ -1,12 +1,20 @@
-<?php require 'login-checker.php'; ?>
+<?php
+require 'login-checker.php';  // Ensure user is logged in
+
+include 'settings.php';
+include 'db-connect.php';
+
+// Check database connection
+if ($conn->connect_error) {
+    die('<div class="alert alert-danger mt-4">Database connection failed: ' . $conn->connect_error . '</div>');
+}
+?>
 
 <!doctype html>
 <html lang="en">
 
 <!-- Header -->
 <?php include 'head.php'; ?>
-<?php include 'settings.php'; ?>
-<?php include 'db-connect.php'; ?>
 
 <body>
     <div class="container-fluid">
@@ -17,7 +25,7 @@
         $sql = "SELECT * FROM clients";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
+        if ($result && $result->num_rows > 0) {
             echo '<table class="table table-striped mt-4">';
             echo '<thead><tr>';
             echo '<th>ID</th>';
@@ -38,8 +46,8 @@
                 echo '<td><a class="text-decoration-none" href="mailto:' . htmlspecialchars($row['Email']) . '">' . htmlspecialchars($row['Email']) . '</a></td>';
                 echo '<td>' . htmlspecialchars($row['Address']) . '</td>';
                 echo '<td>
-                        <a href="edit_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-warning btn-sm"><i class="fa fa-solid fa-pen"></i></a>
-                        <a href="delete_client.php?ClientID=' . htmlspecialchars($row['ClientID']) . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Are you sure you want to delete this client?\');"><i class="fa fa-solid fa-trash"></i></a>
+                        <a href="edit_client.php?ClientID=' . urlencode($row['ClientID']) . '" class="btn btn-warning btn-sm"><i class="fa fa-solid fa-pen"></i></a>
+                        <a href="delete_client.php?ClientID=' . urlencode($row['ClientID']) . '" class="btn btn-danger btn-sm" onclick="return confirm(\'Are you sure you want to delete this client?\');"><i class="fa fa-solid fa-trash"></i></a>
                       </td>';
                 echo '</tr>';
             }
@@ -52,7 +60,6 @@
 
         $conn->close();
         ?>
-
     </div>
 
 </body>

@@ -43,102 +43,83 @@
     <?php
     include "db-connect.php";
 
-    $QuotationID = $_GET["QuotationID"];
+    // Sanitize and validate the QuotationID
+    $QuotationID = filter_input(INPUT_GET, "QuotationID", FILTER_SANITIZE_NUMBER_INT);
 
-    if (empty($QuotationID)) {
+    if (!$QuotationID) {
         header("Location: index.php");
+        exit();
     }
 
-    if ($QuotationID == NULL) {
+    // Prepare and execute the query to fetch quotation data
+    $stmt = $conn->prepare("SELECT * FROM quotations WHERE QuotationID = ?");
+    $stmt->bind_param("i", $QuotationID);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // If no result found, redirect
+    if ($result->num_rows === 0) {
         header("Location: index.php");
+        exit();
     }
 
-    $sql = "SELECT * FROM quotations WHERE QuotationID = $QuotationID";
-    $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 
-    if ($result->num_rows == 0) {
-        header("Location: index.php");
-    }
-
+    // Extract necessary data
     $QuotationNumber = $row["QuotationID"];
     $clientID = $row["ClientID"];
-    $QuotationIssueDate = $row["QuotationDate"];
-    $QuotationIssueDate = date("d-m-Y", strtotime($QuotationIssueDate));
+    $QuotationIssueDate = date("d-m-Y", strtotime($row["QuotationDate"]));
 
-    // Products information
-    $product1_Description = $row["Product1_Description"];
-    $product1_Quantity = $row["Product1_Quantity"];
-    $product1_Rate = $row["Product1_Rate"];
-    $product1_Total = $row["Product1_Total"];
+    // Collect product details into an array
+    $products = [];
+    for ($i = 1; $i <= 6; $i++) {
+        if (!empty($row["Product{$i}_Description"])) {
+            $products[] = [
+                "Description" => $row["Product{$i}_Description"],
+                "Quantity" => $row["Product{$i}_Quantity"],
+                "Rate" => $row["Product{$i}_Rate"],
+                "Total" => $row["Product{$i}_Total"]
+            ];
+        }
+    }
 
-    $product2_Description = $row["Product2_Description"];
-    $product2_Quantity = $row["Product2_Quantity"];
-    $product2_Rate = $row["Product2_Rate"];
-    $product2_Total = $row["Product2_Total"];
-
-    $product3_Description = $row["Product3_Description"];
-    $product3_Quantity = $row["Product3_Quantity"];
-    $product3_Rate = $row["Product3_Rate"];
-    $product3_Total = $row["Product3_Total"];
-
-    $product4_Description = $row["Product4_Description"];
-    $product4_Quantity = $row["Product4_Quantity"];
-    $product4_Rate = $row["Product4_Rate"];
-    $product4_Total = $row["Product4_Total"];
-
-    $product5_Description = $row["Product5_Description"];
-    $product5_Quantity = $row["Product5_Quantity"];
-    $product5_Rate = $row["Product5_Rate"];
-    $product5_Total = $row["Product5_Total"];
-
-    $product6_Description = $row["Product6_Description"];
-    $product6_Quantity = $row["Product6_Quantity"];
-    $product6_Rate = $row["Product6_Rate"];
-    $product6_Total = $row["Product6_Total"];
-
-    $Total = $product1_Total + $product2_Total + $product3_Total + $product4_Total + $product5_Total + $product6_Total;
+    // Calculate total amount and convert to words
+    $Total = array_reduce($products, function ($carry, $item) {
+        return $carry + $item['Total'];
+    }, 0);
     include "utils.php";
     $TotalInWords = convertNumberToWords($Total);
 
-    // Author
+    // Author information
     $QuotationAuthor = $row["QuotationAuthor"];
+    $authorizedSignatureImage = ($QuotationAuthor == "Harshit Raheja") ? "signature_harshit.png" : "signature_ishwar.png";
+    $authorizedSignature = $QuotationAuthor;
 
-    if ($QuotationAuthor == "Harshit Raheja") {
-        $authorizedSignature = "Harshit Raheja";
-        $authorizedSignatureImage = "signature_harshit.png";
-
-    } else if ($QuotationAuthor == "Ishwar Chawla") {
-        $authorizedSignature = "Ishwar Chawla";
-        $authorizedSignatureImage = "signature_ishwar.png";
-    }
-
-    $sql_clients = "SELECT * FROM clients WHERE ClientID = $clientID";
-    $result_clients = $conn->query($sql_clients);
+    // Fetch client details
+    $stmt_clients = $conn->prepare("SELECT * FROM clients WHERE ClientID = ?");
+    $stmt_clients->bind_param("i", $clientID);
+    $stmt_clients->execute();
+    $result_clients = $stmt_clients->get_result();
     $row_clients = $result_clients->fetch_assoc();
 
     $clientName = $row_clients["Name"];
     $address = $row_clients["Address"];
     $phone = $row_clients["Phone"];
 
-    function formatNumber($number)
-    {
-        return number_format($number, 2, ".", ",");
-    }
+    // Format total with comma separation
+    $TotalFormatted = number_format($Total, 2, ".", ",");
 
-    $Total = formatNumber($Total);
-
+    // Output the quotation details
     echo "
     <div class='row m-0 p-0'>
         <div class='col-6 text-start'>
             <h1>To</h1>
             <h2>$clientName</h2>
             <p>
-                <strong>Address</strong><br>
+                <strong>Address:</strong><br>
                 $address
                 <br>
-                <strong>Phone</strong>
-                <br>
+                <strong>Phone:</strong><br>
                 $phone
             </p>
         </div>
@@ -146,77 +127,60 @@
             <img class='img-fluid' width='100px' src='logo.png' alt='Overseas Marketing'>
             <p>Overseas Marketing</p>
             <h1>Quotation</h1>
-            <strong>Quotation Number #</strong>$QuotationNumber
+            <strong>Quotation Number #</strong> $QuotationNumber
             <br>
-            <strong>Quotation Date </strong>$QuotationIssueDate
+            <strong>Quotation Date:</strong> $QuotationIssueDate
         </div>
     </div>
     <table class='table mt-5'>
-    <tbody>
-        <tr>
-            <th>#</th>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Rate</th>
-            <th>Total</th>
-        </tr>
-    ";
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>";
 
-    // Products Table
-    $products = [
-        ["Description" => $product1_Description, "Quantity" => $product1_Quantity, "Rate" => $product1_Rate, "Total" => $product1_Total],
-        ["Description" => $product2_Description, "Quantity" => $product2_Quantity, "Rate" => $product2_Rate, "Total" => $product2_Total],
-        ["Description" => $product3_Description, "Quantity" => $product3_Quantity, "Rate" => $product3_Rate, "Total" => $product3_Total],
-        ["Description" => $product4_Description, "Quantity" => $product4_Quantity, "Rate" => $product4_Rate, "Total" => $product4_Total],
-        ["Description" => $product5_Description, "Quantity" => $product5_Quantity, "Rate" => $product5_Rate, "Total" => $product5_Total],
-        ["Description" => $product6_Description, "Quantity" => $product6_Quantity, "Rate" => $product6_Rate, "Total" => $product6_Total],
-    ];
-
-    $count = 0;
-    foreach ($products as $product) {
-        $count++;
-        if ($product["Description"] == "") {
-            continue;
-        }
+    // Loop through products and render the table
+    foreach ($products as $index => $product) {
+        $count = $index + 1;
         echo "
         <tr>
             <td>$count</td>
-            <td>$product[Description]</td>
-            <td>$product[Quantity]</td>
-            <td>₹ $product[Rate]</td>
-            <td>₹ $product[Total]</td>
-        </tr>
-        ";
+            <td>{$product['Description']}</td>
+            <td>{$product['Quantity']}</td>
+            <td>₹ {$product['Rate']}</td>
+            <td>₹ {$product['Total']}</td>
+        </tr>";
     }
 
     echo "
-    </tbody>
+        </tbody>
     </table>
 
-    <!-- <div class='text-end'>
-        <h2>Total Amount</h2>
-        <h2>₹$Total</h2>
+    <!-- Total section is commented out, remove comment if needed -->
+    <!-- 
+    <div class='text-end'>
+        <h2>Total Amount: ₹$TotalFormatted</h2>
         <p class='mb-0'>$TotalInWords Only</p>
-    </div> -->
+    </div> 
+    -->
 
     <div class='row m-0 p-0 pt-2'>
         <div class='col-12 text-start opacity-75'>
-            <div class='pt-2'>
-                <strong>Authorized Signature</strong>
-                <div class='col-12 text-start'>
-                    <img class='img-fluid' width='100px' src='${authorizedSignatureImage}' alt='${authorizedSignature}'>
-                    <p>${authorizedSignature}</p>
-                </div>
-                <center>
-                    Terms & Conditions Applied*
-                </center>
+            <strong>Authorized Signature</strong>
+            <div class='col-12 text-start'>
+                <img class='img-fluid' width='100px' src='$authorizedSignatureImage' alt='$authorizedSignature'>
+                <p>$authorizedSignature</p>
             </div>
+            <center>Terms & Conditions Applied*</center>
         </div>
     </div>
     ";
-
     ?>
-
 
 </body>
 
