@@ -1,67 +1,47 @@
 <!doctype html>
 <html lang="en">
 
-<?php require 'head.php' ?>
-<?php require 'settings.php' ?>
-
 <?php
+require 'head.php';
+require 'settings.php';
+require 'db-connect.php';
+
+session_start();
 
 $login = false;
 $showError = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    include 'db-connect.php';
-
     $USERNAME = $_POST["username"];
     $PASSWORD = $_POST["password"];
-    $DATE = $_POST["date"];
+    $DATE = date('Y-m-d');  // Use Y-m-d for better compatibility with databases
 
-    // Fetch USERNAME & PASSWORDS from a 'admin_users'
-    $sql = "SELECT * FROM admin_users WHERE username = '$USERNAME' AND password = '$PASSWORD'";
+    // Prepare a secure query to avoid SQL injection
+    $stmt = $conn->prepare("SELECT * FROM admin_users WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $USERNAME, $PASSWORD);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $result = mysqli_query($conn, $sql);
-
-    $row = mysqli_fetch_array($result);
-
-    $num = mysqli_num_rows($result);
-    if ($num == 1) {
+    if ($row = $result->fetch_assoc()) {
+        // Credentials are correct
         $login = true;
-        session_start();
-        // CREATE SESSION VARIABLES
+
+        // Create session variables
         $_SESSION['LOGGED_IN'] = true;
-        // SESSION VARIABLE : Name of user form database
         $_SESSION['name'] = $row['name'];
 
-        // Update Date
-        $sql = "UPDATE `admin_users` SET `last_login_date` = '$DATE' WHERE `username` = '$USERNAME';";
-        $result = mysqli_query($conn, $sql);
+        // Update last login date
+        $stmt = $conn->prepare("UPDATE admin_users SET last_login_date = ? WHERE username = ?");
+        $stmt->bind_param("ss", $DATE, $USERNAME);
+        $stmt->execute();
 
-        if (!$result) {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        } else {
-            // Redirect
-            header("location: index");
-        }
-
+        // Redirect to index page
+        header("location: index");
+        exit();
     } else {
-        $showError = "<script>alert('Invalid Credentials');</script>";
+        $showError = "Invalid Credentials";
     }
-}
-
-if ($login) {
-    echo '
-    <script>
-        console.log("Logged In!");
-    </script>
-    ';
-}
-if ($showError) {
-    echo '
-    <script>
-        alert("Incorrect Username or Password!");
-    </script>
-    ';
 }
 
 ?>
@@ -79,23 +59,26 @@ if ($showError) {
                             <!-- Username input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="username">Username</label>
-                                <input type="username" name="username" id="username" class="form-control"
-                                    autocomplete="off">
+                                <input type="text" name="username" id="username" class="form-control" autocomplete="off"
+                                    required>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="password">Password</label>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    autocomplete="off">
+                                    autocomplete="off" required>
                             </div>
-
-                            <!-- Login Date -->
-                            <input type="hidden" name="date" value="<?php echo date('d-m-Y'); ?>" id="date"
-                                class="form-control" readonly>
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-dark w-100">Log in</button>
+
+                            <!-- Error display -->
+                            <?php if ($showError): ?>
+                                <div class="alert alert-danger mt-3">
+                                    <?php echo $showError; ?>
+                                </div>
+                            <?php endif; ?>
                         </form>
                     </div>
                 </div>

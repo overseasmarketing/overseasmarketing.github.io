@@ -12,21 +12,31 @@
     <div class="container">
         <?php
         // Handle deletion
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['QuotationID'])) {
             $QuotationID = intval($_GET['QuotationID']);
 
-            // Delete Quotation from the database
-            $sql = "DELETE FROM quotations WHERE QuotationID = $QuotationID";
-            $conn->query($sql);
-            $result = $conn->query($sql);
+            // Prepare and execute the delete statement
+            $sql = "DELETE FROM quotations WHERE QuotationID = ?";
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("i", $QuotationID);
 
-            if ($result) {
-                echo "<div class='alert alert-success' role='alert'>Quotation deleted successfully!</div>";
-                header("Location: index.php");
+                if ($stmt->execute()) {
+                    // Redirect to index.php with a success message
+                    header("Location: index.php?message=" . urlencode("Quotation deleted successfully") . "&status=success");
+                    exit();
+                } else {
+                    echo "<div class='alert alert-danger' role='alert'>Error deleting Quotation: " . $stmt->error . "</div>";
+                }
+
+                $stmt->close();
             } else {
-                echo "<div class='alert alert-danger' role='alert'>Error deleting Quotation!</div>";
+                echo "<div class='alert alert-danger' role='alert'>Error preparing statement: " . $conn->error . "</div>";
             }
+        } else {
+            echo "<div class='alert alert-danger' role='alert'>Invalid request. Quotation ID is missing.</div>";
         }
+
+        $conn->close();
         ?>
         <br>
     </div>

@@ -16,28 +16,32 @@
         // Handle client update
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_client'])) {
             $clientID = intval($_POST['ClientID']);
-            $name = $_POST['name'];
-            $phone = $_POST['phone'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
+            $name = htmlspecialchars($_POST['name']);
+            $phone = htmlspecialchars($_POST['phone']);
+            $email = htmlspecialchars($_POST['email']);
+            $address = htmlspecialchars($_POST['address']);
 
-            // Update client information
-            $sql = "UPDATE clients SET Name='$name', Phone='$phone', Email='$email', Address='$address' WHERE ClientID=$clientID";
+            // Use a prepared statement to avoid SQL injection
+            $stmt = $conn->prepare("UPDATE clients SET Name=?, Phone=?, Email=?, Address=? WHERE ClientID=?");
+            $stmt->bind_param("ssssi", $name, $phone, $email, $address, $clientID);
 
-            if ($conn->query($sql) === TRUE) {
+            if ($stmt->execute()) {
                 echo "<div class='alert alert-success mt-4'>Client updated successfully.</div>";
-                header("Location: index.php");
+                echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 2000);</script>";
                 exit;
             } else {
-                echo "<div class='alert alert-danger mt-4'>Error: " . $conn->error . "</div>";
+                echo "<div class='alert alert-danger mt-4'>Error: " . $stmt->error . "</div>";
             }
+            $stmt->close();
         }
 
         // Fetch client data for editing
         if (isset($_GET['ClientID'])) {
             $clientID = intval($_GET['ClientID']);
-            $sql = "SELECT * FROM clients WHERE ClientID=$clientID";
-            $result = $conn->query($sql);
+            $stmt = $conn->prepare("SELECT * FROM clients WHERE ClientID=?");
+            $stmt->bind_param("i", $clientID);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
                 $client = $result->fetch_assoc();
@@ -45,6 +49,7 @@
                 echo "<div class='alert alert-warning mt-4'>Client not found.</div>";
                 exit;
             }
+            $stmt->close();
         } else {
             echo "<div class='alert alert-warning mt-4'>Client ID is missing.</div>";
             exit;
