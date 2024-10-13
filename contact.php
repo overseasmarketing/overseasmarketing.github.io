@@ -57,6 +57,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center my-2" data-aos="fade">
                 <div class="col-12 col-lg-10 col-xl-8">
+
                     <form method="POST" action="submit.php" class="bg-transparent rounded shadow-sm">
                         <h1>Schedule A Meeting</h1>
                         <br>
@@ -84,7 +85,8 @@
                                         <label for="phone" class="form-label">Phone Number</label>
                                         <small id="phoneNumberError" class="text-danger"></small>
                                         <input type="tel" class="form-control form-input" id="phone" name="phone"
-                                            required maxlength="10" pattern="\d+" oninput="validatePhoneNumber(this)">
+                                            required maxlength="10" pattern="\d{10}"
+                                            oninput="validatePhoneNumber(this)">
                                     </div>
                                 </div>
                             </div>
@@ -120,18 +122,23 @@
                     </form>
 
                     <script>
+                        // Phone number validation (optional, since pattern already enforces numbers)
                         function validatePhoneNumber(input) {
-                            var numericRegex = /^\d+$/;
-                            var errorElement = document.getElementById('phoneNumberError');
-                            if (!numericRegex.test(input.value)) {
-                                errorElement.textContent = "Only numeric values are allowed";
-                                input.value = input.value.slice(0, -1);
+                            const phonePattern = /^\d{10}$/;
+                            const phoneNumberError = document.getElementById('phoneNumberError');
+                            if (!phonePattern.test(input.value)) {
+                                phoneNumberError.textContent = "Please enter a valid 10-digit phone number.";
                             } else {
-                                errorElement.textContent = '';
+                                phoneNumberError.textContent = "";
                             }
                         }
-                        document.getElementById('meeting_date').min = new Date().toISOString().split('T')[0];
+
+                        // Ensure meeting date is not in the past
+                        const today = new Date().toISOString().split('T')[0];
+                        document.getElementById("meeting_date").setAttribute('min', today);
                     </script>
+
+
                 </div>
             </div>
         </div>

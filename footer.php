@@ -24,38 +24,32 @@
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="mt-4">
                     <center>
-                        <button class="btn btn-dark cursor-pointer m-1"
-                            onclick="openLink('https://overseasmarketing.co.in');">
-                            Home
-                        </button>
-                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('services')">
-                            Services
-                        </button>
-                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('about')">
-                            About
-                        </button>
-                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('contact')">
-                            Contact
-                        </button>
-                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('work')">
-                            Work
-                        </button>
-                        <button class="btn btn-dark cursor-pointer m-1" onclick="openLink('T&C.pdf')">
-                            Terms & Conditions
-                        </button>
+                        <a class="btn btn-dark m-1" href="https://overseasmarketing.co.in" aria-label="Home">Home</a>
+                        <a class="btn btn-dark m-1" href="services" aria-label="Services">Services</a>
+                        <a class="btn btn-dark m-1" href="about" aria-label="About">About</a>
+                        <a class="btn btn-dark m-1" href="contact" aria-label="Contact">Contact</a>
+                        <a class="btn btn-dark m-1" href="work" aria-label="Work">Work</a>
+                        <a class="btn btn-dark m-1" href="T&C.pdf" aria-label="Terms & Conditions">Terms &
+                            Conditions</a>
                     </center>
                 </div>
             </div>
         </div>
         <div class="container text-center pb-5 pt-2">
-            © Copyright Overseas Marketing
-            All Rights Reserved</a>
+            © <span id="currentYear"></span> Overseas Marketing. All Rights Reserved.
         </div>
     </div>
 </footer>
 
+<!-- AOS JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 <script>
-    AOS.init({
-        duration: 800, // values from 0 to 3000, with step 50ms
-    });
+// Initialize AOS
+AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+});
+
+// Set current year dynamically
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>

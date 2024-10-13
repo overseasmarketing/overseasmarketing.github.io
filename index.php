@@ -25,14 +25,16 @@
         </div>
 
         <div class="container p-5">
-            <h2>Our Clients</h2>
+            <h2 class="text-start">Our Clients</h2>
             <center>
                 <?php
                 $directory = 'img/clients';
-                $images = glob($directory . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+                $images = glob($directory . '/*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
 
                 foreach ($images as $image) {
-                    echo '<img class="img-fluid m-1 rounded-circle client-logo cursor-pointer" src="' . $image . '" alt="">';
+                    // Extract file name for alt attribute
+                    $imageName = pathinfo($image, PATHINFO_FILENAME);
+                    echo '<img class="img-fluid m-1 rounded-circle client-logo cursor-pointer" loading="lazy" src="' . $image . '" alt="Logo of ' . htmlspecialchars($imageName) . '">';
                 }
                 ?>
             </center>

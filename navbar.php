@@ -10,12 +10,12 @@
             </div>
             <div class="col-2">
                 <center>
-                    <button onclick="navbarIcon()" style="box-shadow: none; border: none; transition: 200ms;"
+                    <button style="box-shadow: none; border: none; transition: 200ms;"
                         class="navbar-toggler navbar-button bg-light text-dark" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i id="bar-icon" style="display: block;" class="fa fa-solid fa-bars p-2"></i>
-                        <i id="x-icon" style="display: none;" class="fa fa-solid fa-xmark p-2"></i>
+                        aria-expanded="false" aria-label="Toggle navigation" onclick="navbarIcon()">
+                        <i id="bar-icon" class="fa fa-solid fa-bars p-2"></i>
+                        <i id="x-icon" class="fa fa-solid fa-xmark p-2 d-none"></i>
                     </button>
                 </center>
             </div>
@@ -23,23 +23,22 @@
                 <div class="bg-transparent p-4">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer"
-                                onclick="openLink('https://overseasmarketing.co.in');">Home</a>
+                            <a class="nav-link" href="https://overseasmarketing.co.in">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer" onclick="openLink('services')">Services</a>
+                            <a class="nav-link" href="services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer" onclick="openLink('about')">About</a>
+                            <a class="nav-link" href="about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer" onclick="openLink('contact')">Contact</a>
+                            <a class="nav-link" href="contact">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer" onclick="openLink('work')">Work</a>
+                            <a class="nav-link" href="work">Work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cursor-pointer" onclick="openLink('T&C.pdf')">Terms & Conditions</a>
+                            <a class="nav-link" href="T&C.pdf">Terms & Conditions</a>
                         </li>
                     </ul>
                 </div>
@@ -49,21 +48,12 @@
 </nav>
 
 <script>
-    // Navbar
+    // Navbar Icon Toggle
     function navbarIcon() {
         let barIcon = document.getElementById('bar-icon');
         let xIcon = document.getElementById('x-icon');
 
-        if (barIcon.style.display === 'block') {
-            barIcon.style.display = 'none';
-            xIcon.style.display = 'block';
-        } else {
-            barIcon.style.display = 'block';
-            xIcon.style.display = 'none';
-        }
-    }
-
-    function openLink(link) {
-        window.location.href = link;
+        barIcon.classList.toggle('d-none');
+        xIcon.classList.toggle('d-none');
     }
 </script>
