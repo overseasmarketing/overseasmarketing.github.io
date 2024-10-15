@@ -23,6 +23,13 @@
     <style>
         th {
             cursor: pointer !important;
+            transition: 200ms;
+        }
+
+        th:hover {
+            background-color: #a9a9a980 !important;
+            color: black !important;
+            transition: 200ms;
         }
     </style>
 </head>
