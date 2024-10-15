@@ -48,12 +48,12 @@
             if ($result->num_rows > 0) {
                 echo "<table class='table table-striped mt-1' id='invoiceTable'>";
                 echo "<thead><tr>";
-                echo "<th class='cursor-pointer' onclick='sortTable(0, \"invoiceTable\")'>#</th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(1, \"invoiceTable\")'>Invoice ID <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(2, \"invoiceTable\")'>Client <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(3, \"invoiceTable\")'>Issue Date <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(4, \"invoiceTable\")'>Due Date <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(5, \"invoiceTable\")'>Status <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(0, \"invoiceTable\")'>#</th>";
+                echo "<th onclick='sortTable(1, \"invoiceTable\")'>Invoice ID <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(2, \"invoiceTable\")'>Client <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(3, \"invoiceTable\")'>Issue Date <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(4, \"invoiceTable\")'>Due Date <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(5, \"invoiceTable\")'>Status <i class='fa fa-sort'></i></th>";
                 echo "<th>Actions</th></tr></thead>";
                 echo "<tbody>";
                 $count = 0;
@@ -98,11 +98,11 @@
             if ($result->num_rows > 0) {
                 echo "<table class='table table-striped mt-1' id='quotationTable'>";
                 echo "<thead><tr>";
-                echo "<th class='cursor-pointer' onclick='sortTable(0, \"quotationTable\")'>#</th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(1, \"quotationTable\")'>Quotation ID <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(2, \"quotationTable\")'>Client <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(3, \"quotationTable\")'>Issue Date <i class='fa fa-sort'></i></th>";
-                echo "<th class='cursor-pointer' onclick='sortTable(4, \"quotationTable\")'>Status <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(0, \"quotationTable\")'>#</th>";
+                echo "<th onclick='sortTable(1, \"quotationTable\")'>Quotation ID <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(2, \"quotationTable\")'>Client <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(3, \"quotationTable\")'>Issue Date <i class='fa fa-sort'></i></th>";
+                echo "<th onclick='sortTable(4, \"quotationTable\")'>Status <i class='fa fa-sort'></i></th>";
                 echo "<th>Actions</th></tr></thead>";
                 echo "<tbody>";
                 $count = 0;
