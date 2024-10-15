@@ -45,11 +45,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <script>
-// Initialize AOS
-AOS.init({
-    duration: 800, // values from 0 to 3000, with step 50ms
-});
+    // Initialize AOS
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
 
-// Set current year dynamically
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+    // Set current year dynamically
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
